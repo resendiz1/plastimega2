@@ -836,7 +836,7 @@
 .courses {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(12, 24, 68, 0.7), rgba(12, 24, 68, 0.7)), url(../img/services-img.jpg);
+    background: linear-gradient(rgba(12, 24, 68, 0.9), rgba(12, 24, 68, 0.9)), url(../img/plastimega/plastimega3.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -848,19 +848,19 @@
 }
 
 .courses .courses-item p {
-    color: var(--bs-white);
+    color: var(--bs-dark);
     transition: 0.5s;
 }
 
 .courses .courses-item:hover p {
-    color: var(--bs-body);
+    color: var(--bs-white);
 }
 
 .courses-item .courses-item-inner {
     position: relative;
     transform: skew(4deg);
     margin: 0 15px;
-    background: rgba(255, 245, 225, .5);
+    background: rgba(241, 241, 241, 0.911);
     transition: 0.5s;
 }
 
@@ -873,7 +873,7 @@
 }
 
 .courses-item .courses-item-inner .data-info .courses-trainer {
-    color: var(--bs-white);
+    color: var(--bs-dark);
     transition: 0.5s;
 }
 
@@ -907,7 +907,7 @@
 }
 
 .courses-item-inner:hover a:hover {
-    color: var(--bs-primary);
+    color: var(--bs-white);
 }
 
 .courses-item-inner::after {
@@ -935,7 +935,7 @@
 
 .blog .blog-item {
     position: relative;
-    border: 1px solid var(--bs-primary);
+    border: 3px solid var(--bs-dark);
     transition: 0.5s;
 }
 
@@ -964,8 +964,8 @@
     height: 100%;
     top: 0;
     left: 0;
-    transform: skew(100deg);
-    background: rgba(200, 0, 54, 1);
+    /* transform: skew(100deg);
+    background: rgba(155, 155, 155, 0.5); */
     border: none;
     transition: 0.5s;
     z-index: -1;
@@ -979,8 +979,8 @@
     height: 100%;
     top: 0;
     left: 0;
-    transform: skew(-100deg);
-    background: rgba(12, 24, 68, 1);
+    /* transform: skew(100deg);
+    background: rgba(12, 24, 68, 0.5); */
     border: none;
     transition: 0.5s;
     z-index: -1;
@@ -1020,7 +1020,7 @@
 .blog-carousel .owl-dots .owl-dot.active {
     width: 30px;
     height: 50px;
-    background: var(--bs-primary);
+    background: var(--bs-dark);
     transition: 0.5s;
 }
 
@@ -1055,7 +1055,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: var(--bs-primary);
+    background: var(--bs-white);
     transition: 0.5s;
 }
 /*** Blog End ***/
@@ -1064,7 +1064,7 @@
 .explore {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(12, 24, 68, 0.7), rgba(12, 24, 68, 0.7)), url(../img/services-img.jpg);
+    background: linear-gradient(rgba(12, 24, 68, 0.7), rgba(12, 24, 68, 0.7)), url(../img/empresa/3.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1082,7 +1082,7 @@
 .team .team-item .team-img {
     position: relative;
     overflow: hidden;
-    transform: matrix(1, -0.1, 0, 1, 0, 0);
+    /* transform: matrix(1, -0.1, 0, 1, 0, 0); */
     transition: 0.5s;
 }
 
@@ -1132,9 +1132,9 @@
     overflow: hidden;
     text-align: center;
     padding: 25px;
-    border: 1px solid var(--bs-primary);
+    border: 5px solid var(--bs-dark);
     border-top: none;
-    transform: matrix(1, -0.1, 0, 1, 0, 0);
+    /* transform: matrix(1, -0.1, 0, 1, 0, 0); */
     transition: 0.5s;
 }
 
@@ -1173,7 +1173,7 @@
 .testimonial {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(12, 24, 68, 0.9), rgba(12, 24, 68, 0.9)), url(../img/services-img.jpg);
+    background: linear-gradient(rgba(12, 24, 68, 0.7), rgba(9, 21, 56, 0.9)), url(../img/empresa/3.jpg);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1196,7 +1196,7 @@
 }
 
 .testimonial-item .testimonial-img {
-    border: 2px solid var(--bs-primary);
+    border: 4px solid var(--bs-white);
 }
 
 .testimonial-item .testimonial-img img {
@@ -1211,7 +1211,7 @@
     height: 50px;
     top: 0;
     transform: skew(18deg);
-    background: var(--bs-primary);
+    background: var(--bs-dark);
     color: var(--bs-white);
     font-size: 26px;
     display: flex;
@@ -1235,7 +1235,7 @@
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
     background: var(--bs-white);
-    color: var(--bs-primary);
+    color: var(--bs-dark);
 }
 /*** Testimonial End ***/
 
@@ -1285,7 +1285,7 @@
 /*** Footer Start ***/
 .footer {
     overflow: hidden;
-    background: linear-gradient(rgba(12, 24, 68, 0.9), rgba(12, 24, 68, 0.98)), url(../img/services-img.jpg);
+    background: linear-gradient(rgba(12, 24, 68, 0.5), rgba(12, 24, 68, 0.9)), url(../img/empresa/1.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1360,7 +1360,9 @@
     background: var(--bs-dark);
 }
 /*** copyright end ***/
-
+a:hover{
+    color: gray;
+}
 
 
 
