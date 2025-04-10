@@ -441,7 +441,7 @@
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(12, 24, 68, 0.7), rgba(12, 24, 68, 0.7)), url(../img/goal-background-img.jpg);
+    background: linear-gradient(rgba(12, 24, 68, 0.7), rgba(12, 24, 68, 0.7)), url(../img/empresa/3.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1245,7 +1245,7 @@
 }
 
 .contact .form-section form .form-section-col {
-    transform: skewX(18deg);
+    /* transform: skewX(18deg); */
     margin: 0 12px;
 }
 
@@ -1277,8 +1277,8 @@
 }
 
 .contact form button:hover {
-    background: var(--bs-white);
-    color: var(--bs-primary);
+    background: var(--bs-gray);
+    color: var(--bs-white);
 }
 /*** Contact End ***/
 
