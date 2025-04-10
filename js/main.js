@@ -156,3 +156,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
 });
 
+
+document.addEventListener("keyup", function(e) {
+    if (e.key === "PrintScreen") {
+      alert("No está permitido tomar capturas de pantalla.");
+    }
+  });

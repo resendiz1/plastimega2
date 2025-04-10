@@ -87,6 +87,7 @@
 
 .btn.btn-primary {
     color: var(--bs-white);
+    background-color: var(--bs-dark);
     border: none;
     transform: skew(18deg);
     transition: 0.5s;
@@ -124,7 +125,7 @@
 
 
 .btn.btn-dark {
-    color: var(--bs-primary);
+    color: var(--bs-white);
     border: none;
     transform: skew(18deg);
     transition: 0.5s;
@@ -137,8 +138,8 @@
 }
 
 .btn.btn-dark:hover {
-    color: var(--bs-white);
-    background: var(--bs-primary);
+    color: var(--bs-dark);
+    background: var(--bs-white);
 }
 
 /*** Navbar Start ***/
@@ -686,7 +687,7 @@
 }
 
 .goal .goal-item {
-    transform: skew(10deg);
+    /* transform: skew(10deg); */
     box-shadow: 0 0 45px rgba(12, 24, 68, 0.4);
     margin: 0 15px 15px 15px;
 }
@@ -712,7 +713,7 @@
 .feature-carousel.owl-carousel {
     z-index: 9;
     padding: 0 60px;
-    transform: skew(10deg);
+    /* transform: skew(10deg); */
 }
 
 .feature .feature-shaps {
@@ -722,7 +723,7 @@
     height: 300px;
     margin-top: -200px;
     transform: skewX(-10deg);
-    border: 3px solid var(--bs-primary);
+    border: 3px solid var(--bs-gray);
     z-index: 2;
 }
 
@@ -777,7 +778,7 @@
 }
 
 .feature .feature-item:hover .feature-content h4 {
-    color: var(--bs-primary);
+    color: var(--bs-white);
 }
 
 .feature .feature-item .feature-content::after {
