@@ -175,8 +175,10 @@
                                     <div class="bg-white d-flex">
                                         <i class="fas fa-envelope fa-2x text-dark me-2"></i>
                                         <div>
-                                            <h4>Correo Electrónico</h4>
-                                            <p class="mb-0">info@example.com</p>
+                                            <h4>Correos Electrónicos</h4>
+                                            <a href="mailto:mperez@plastimega.com.mx" class="mb-0 text-dark">mperez@plastimega.com.mx</a> <br>
+                                            <a href="mailto:contacto@plastimega.com.mx" class="mb-o text-dark">contacto@plastimega.com.mx</a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -185,69 +187,78 @@
                                         <i class="fa fa-phone-alt fa-2x text-dark me-2"></i>
                                         <div>
                                             <h4>Teléfonos: </h4>
-                                            <a href="tel:+522227209284" class="mb-0 text-dark">2227209284</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="bg-white d-flex">
-                                        <i class="fab fa-firefox-browser fa-2x text-dark me-2"></i>
-                                        <div>
-                                            <h4>Yoursite@ex.com</h4>
-                                            <p class="mb-0">(+012) 3456 7890</p>
+                                            <a href="tel:+522227209284" class="mb-0 text-dark">2227209284</a> <br>
+                                            <a href="tel:+522494260904" class="text-dark">2494260904</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex ms-2 mb-5">
-                            <a class="btn btn-dark py-2 px-3 px-sm-4 me-2" href="#"> <span>facebook</span> <i class="fas fa-chevron-circle-right"></i></a>
-                            <a class="btn btn-dark py-2 px-3 px-sm-4 mx-2" href="#"> <span>twitter</span> <i class="fas fa-chevron-circle-right"></i></a>
-                            <a class="btn btn-dark py-2 px-3 px-sm-4 ms-2" href="#"> <span>instagram</span> <i class="fas fa-chevron-circle-right"></i></a>
+                            <a class="btn btn-dark py-2 px-3 px-sm-4 me-2" target="_blank" href="https://www.facebook.com/PlastimegaMX/"> <span>Facebook</span> <i class="fas fa-chevron-circle-right"></i></a>
+                            <a class="btn btn-dark py-2 px-3 px-sm-4 ms-2" target="_blank" href="https://www.instagram.com/plastimegamx/?hl=es"> <span>Instagram</span> <i class="fas fa-chevron-circle-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
                         <div class="form-section bg-dark p-5 h-100">
                             <h1 class="display-4 text-white mb-4">Envianos un Mensaje</h1>
-                            <form>
                                 <div class="row g-4">
                                     <div class="col-lg-12 col-xl-12">
                                         <div class="form-floating form-section-col">
                                             <input type="text" class="form-control border-0" id="name" placeholder="Nombre completo">
                                             <label for="name">Nombre completo</label>
+                                            <div class="alert alert-primary p-1">
+                                                <i class="fas fa-info-circle"></i>
+                                                Este campo es obligatorio
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-xl-12">
                                         <div class="form-floating form-section-col">
-                                            <input type="email" class="form-control border-0" id="email" placeholder="Correo Electrónico">
+                                            <input type="email" class="form-control border-0" id="email_cliente" placeholder="Correo Electrónico">
                                             <label for="email">Correo Electrónico</label>
+                                            <div class="alert alert-primary p-1">
+                                                <i class="fas fa-info-circle"></i>
+                                                Este campo es obligatorio
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating form-section-col">
-                                            <input type="phone" class="form-control border-0" id="phone" placeholder="Número de Teléfono">
+                                            <input type="phone" class="form-control border-0" id="telefono_cliente" placeholder="Número de Teléfono">
                                             <label for="phone">Número de Teléfono</label>
+                                            <div class="alert alert-primary p-1">
+                                                <i class="fas fa-info-circle"></i>
+                                                Este campo es obligatorio
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating form-section-col">
-                                            <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
+                                            <input type="text" class="form-control border-0" id="asunto_cliente" placeholder="Subject">
                                             <label for="subject">Asunto</label>
+                                            <div class="alert alert-primary p-1">
+                                                <i class="fas fa-info-circle"></i>
+                                                Este campo es obligatorio
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating form-section-col" >
-                                            <textarea class="form-control w-100 h-75" placeholder="Dejanos tu mensaje" id="message" ></textarea>
+                                            <textarea class="form-control w-100 h-75" placeholder="Dejanos tu mensaje" id="mensaje_cliente" ></textarea>
                                             <label for="message">Dejanos tu mensaje y nosotros nos contactaremos.</label>
+                                            <div class="alert alert-primary p-1">
+                                                <i class="fas fa-info-circle"></i>
+                                                Este campo es obligatorio
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mt-5">
                                         <div class="form-section-col">
-                                            <button class="btn-white w-100 py-3 px-5">Enviar Mensaje</button>
+                                            <button class="btn-white w-100 py-3 px-5" id="contacto_cliente">Enviar Mensaje</button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </div>
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.2s">

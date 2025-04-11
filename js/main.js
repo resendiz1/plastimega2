@@ -162,3 +162,8 @@ document.addEventListener("keyup", function(e) {
       alert("No está permitido tomar capturas de pantalla.");
     }
   });
+
+
+{
+    
+}
