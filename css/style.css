@@ -106,7 +106,7 @@
 }
 
 .btn.btn-light {
-    color: var(--bs-primary);
+    color: var(--bs-dark);
     border: none;
     transform: skew(18deg);
     transition: 0.5s;
@@ -120,7 +120,7 @@
 
 .btn.btn-light:hover {
     color: var(--bs-white);
-    background: var(--bs-primary);
+    background: var(--bs-dark);
 }
 
 

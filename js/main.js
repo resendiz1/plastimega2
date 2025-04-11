@@ -164,6 +164,32 @@ document.addEventListener("keyup", function(e) {
   });
 
 
-{
+
+
+
+{  
+  //validacion de los datos del formulario
+  $nombre = document.getElementById('name_cliente').value;
+  $correo = document.getElementById('email_cliente').value;
+  $telefono = document.getElementById('telefono_cliente').value;
+  $asunto = document.getElementById('asunto_cliente').value;
+  $mensaje = document.getElementById('mensaje_cliente').value;
+  $error = document.getElementById('error');
+
+document.getElementById('contacto_cliente').addEventListener('click', ()=>{
+
     
+    if($nombre == "" || $correo == "" || $telefono == "" || $asunto == "" || $mensaje == ""){
+    
+        $error.classList.remove('d-none');
+        setTimeout(()=>{
+        $error.classList.add('d-none');
+
+        }, 5000)
+    
+    }
+
+})
+
+
 }

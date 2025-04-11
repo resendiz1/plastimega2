@@ -96,7 +96,7 @@
                                 <div class="navbar-nav mx-0 mx-lg-auto">
                                     <a href="index.html" class="nav-item nav-link text-dark active">Inicio</a>
                                     <a href="about.html" class="nav-item nav-link text-dark">Nosotros</a>
-                                    <a href="course.html" class="nav-item nav-link text-dark">Courses</a>
+                                    <!-- <a href="course.html" class="nav-item nav-link text-dark">Courses</a>
                                     <a href="blog.html" class="nav-item nav-link text-dark">Blogs</a>
                                     <div class="nav-item dropdown">
                                         <a href="#" class="nav-link text-dark" data-bs-toggle="dropdown">
@@ -108,7 +108,7 @@
                                             <a href="testimonial.html" class="dropdown-item text-dark">Testimonial</a>
                                             <a href="404.html" class="dropdown-item text-dark">404 Page</a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <a href="contact.html" class="nav-item nav-link text-dark">Contacto</a>
                                     <div class="nav-btn ps-3 px-4">
                                         <button class="btn-search btn bg-dark text-white border-white py-2 px-4 ms-0 ms-lg-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
@@ -203,11 +203,17 @@
                         <div class="form-section bg-dark p-5 h-100">
                             <h1 class="display-4 text-white mb-4">Envianos un Mensaje</h1>
                                 <div class="row g-4">
+                                    <div id="error" class="col-12 d-none" >
+                                        <div class="alert alert-danger">
+                                            <i class="fa fa-info-circle"></i>
+                                            Todos los campos son obligatorios
+                                        </div>
+                                    </div>
                                     <div class="col-lg-12 col-xl-12">
                                         <div class="form-floating form-section-col">
-                                            <input type="text" class="form-control border-0" id="name" placeholder="Nombre completo">
+                                            <input type="text" class="form-control border-0" id="name_cliente" placeholder="Nombre completo">
                                             <label for="name">Nombre completo</label>
-                                            <div class="alert alert-primary p-1">
+                                            <div class="alert alert-primary p-1 d-none">
                                                 <i class="fas fa-info-circle"></i>
                                                 Este campo es obligatorio
                                             </div>
@@ -217,7 +223,7 @@
                                         <div class="form-floating form-section-col">
                                             <input type="email" class="form-control border-0" id="email_cliente" placeholder="Correo Electrónico">
                                             <label for="email">Correo Electrónico</label>
-                                            <div class="alert alert-primary p-1">
+                                            <div class="alert alert-primary p-1 d-none">
                                                 <i class="fas fa-info-circle"></i>
                                                 Este campo es obligatorio
                                             </div>
@@ -227,7 +233,7 @@
                                         <div class="form-floating form-section-col">
                                             <input type="phone" class="form-control border-0" id="telefono_cliente" placeholder="Número de Teléfono">
                                             <label for="phone">Número de Teléfono</label>
-                                            <div class="alert alert-primary p-1">
+                                            <div class="alert alert-primary p-1 d-none">
                                                 <i class="fas fa-info-circle"></i>
                                                 Este campo es obligatorio
                                             </div>
@@ -237,7 +243,7 @@
                                         <div class="form-floating form-section-col">
                                             <input type="text" class="form-control border-0" id="asunto_cliente" placeholder="Subject">
                                             <label for="subject">Asunto</label>
-                                            <div class="alert alert-primary p-1">
+                                            <div class="alert alert-primary p-1 d-none">
                                                 <i class="fas fa-info-circle"></i>
                                                 Este campo es obligatorio
                                             </div>
@@ -247,7 +253,7 @@
                                         <div class="form-floating form-section-col" >
                                             <textarea class="form-control w-100 h-75" placeholder="Dejanos tu mensaje" id="mensaje_cliente" ></textarea>
                                             <label for="message">Dejanos tu mensaje y nosotros nos contactaremos.</label>
-                                            <div class="alert alert-primary p-1">
+                                            <div class="alert alert-primary p-1 d-none">
                                                 <i class="fas fa-info-circle"></i>
                                                 Este campo es obligatorio
                                             </div>
@@ -307,13 +313,11 @@
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-2">
                         <div class="footer-item">
-                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <h4 class="text-white mb-4">Accesos Directos</h4>
                             <a href="index.html"> Inicio</a>
-                            <a href="about.html"> Acerca De</a>
-                            <a href="#"> Our Courses</a>
-                            <a href="#"> Our Features</a>
-                            <a href="#"> Our Blog & news</a>
-                            <a href="#"> Testimonial</a>
+                            <a href="about.html"> Nosotros</a>
+                            <a href="contact.html">Contacto</a>
+
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-6">
