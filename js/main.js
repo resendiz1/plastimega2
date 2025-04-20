@@ -159,7 +159,24 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 document.addEventListener("keyup", function(e) {
     if (e.key === "PrintScreen") {
-      alert("No está permitido tomar capturas de pantalla.");
+
+        // Reemplazar contenido del portapapeles 
+        navigator.clipboard.writeText("Contenido protegido por Plastimega")
+        .then(() => {
+        alert("Captura bloqueada (parcialmente): se reemplazó el portapapeles");
+        })
+        .catch(err => {
+        console.error("Error al escribir en el portapapeles:", err);
+        });
+        // Reemplazar contenido del portapapeles
+
+
+        this.body.innerHTML="<h1>No está permitido tomar capturas de pantalla.! </h1>";
+        setTimeout(()=>{
+            this.location.reload();
+        },4000)
+        alert("No está permitido tomar capturas de pantalla.");
+
     }
   });
 
@@ -168,21 +185,35 @@ document.addEventListener("keyup", function(e) {
 
 
 {  
+
+
+
+(function(){
+    emailjs.init("m202FJpgz8JlMhJrh");
+})();
+
+
+
+
   //validacion de los datos del formulario
   if(document.getElementById('contacto_cliente')){
 
   
-  $nombre = document.getElementById('name_cliente').value;
-  $correo = document.getElementById('email_cliente').value;
-  $telefono = document.getElementById('telefono_cliente').value;
-  $asunto = document.getElementById('asunto_cliente').value;
-  $mensaje = document.getElementById('mensaje_cliente').value;
-  $error = document.getElementById('error');
+   let $nombre = document.getElementById('nombre_cliente');
+   let $correo = document.getElementById('email_cliente');
+   let $telefono = document.getElementById('telefono_cliente');
+   let $asunto = document.getElementById('asunto_cliente');
+   let $mensaje = document.getElementById('mensaje_cliente');
+   let $error = document.getElementById('error');
+   let $success = document.getElementById('success');
+
+
 
 document.getElementById('contacto_cliente').addEventListener('click', ()=>{
 
-    
-    if($nombre == "" || $correo == "" || $telefono == "" || $asunto == "" || $mensaje == ""){
+    console.log($nombre.value)
+
+    if($nombre.value === "" || $correo.value === "" || $telefono.value === "" ||  $asunto.value === "" || $mensaje.value === ""){
     
         $error.classList.remove('d-none');
         setTimeout(()=>{
@@ -191,6 +222,44 @@ document.getElementById('contacto_cliente').addEventListener('click', ()=>{
         }, 5000)
     
     }
+    else{
+
+
+        // alert($nombre.value + $correo.value + $telefono.value + $asunto.value + $mensaje.value)
+        emailjs.send("service_9m5rcfq", 'template_jxef3lh', {
+            
+            nombre_cliente: $nombre.value,
+            correo_cliente: $correo.value,
+            telefono_cliente: $telefono.value,
+            asunto_cliente: $asunto.value,
+            mensaje_cliente: $mensaje.value,
+
+        }).then(function(response){
+
+            $nombre.value = "";
+            $correo.value = "";
+            $telefono.value = "";
+            $asunto.value = "";
+            $mensaje.value = "";
+
+            $success.classList.remove('d-none');
+            setTimeout(()=>{
+                $success.classList.add('d-none');
+            }, 5000);
+
+
+            console.log(response.status);
+
+            
+        }, function(error){
+
+            alert('error enviar')
+            console.log("error al enviar" + error)
+
+        })
+
+
+    }
 
 })
 }
@@ -198,6 +267,14 @@ document.getElementById('contacto_cliente').addEventListener('click', ()=>{
 }
 
 
+
+
+
+
+
+
+
+// Este es el js de el catalogo
 {
 
 let mostrador = document.getElementById("mostrador");
@@ -241,3 +318,5 @@ function quitarBordes(){
 
 
 }
+
+

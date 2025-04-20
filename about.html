@@ -27,6 +27,7 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
     </head>
 
     <body>
@@ -94,8 +95,9 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarCollapse">
                                 <div class="navbar-nav mx-0 mx-lg-auto">
-                                    <a href="index.html" class="nav-item nav-link text-dark active">Inicio</a>
+                                    <a href="index.html" class="nav-item nav-link text-dark">Inicio</a>
                                     <a href="about.html" class="nav-item nav-link text-dark">Nosotros</a>
+                                    <a href="proveedores.html" class="nav-item nav-link text-dark">Proveedores</a>
                                     <!-- <a href="course.html" class="nav-item nav-link text-dark">Courses</a>
                                     <a href="blog.html" class="nav-item nav-link text-dark">Blogs</a>
                                     <div class="nav-item dropdown">
@@ -143,6 +145,103 @@
             </div>
         </div>
         <!-- Modal Search End -->
+
+
+
+        <!-- Modal de contacto Start -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Formulario de contacto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center bg-dark">
+                        <div class="row justify-content-center">
+                            <div class="col-12 mx-5" data-wow-delay="0.4s">
+                                <div class="form-section bg-dark p-5 h-100">
+                                    <h1 class="display-4 text-white mb-4">Envianos un Mensaje</h1>
+                                        <div class="row g-4">
+                                            <div id="error" class="col-12 d-none" >
+                                                <div class="alert alert-danger">
+                                                    <i class="fa fa-info-circle"></i>
+                                                    Todos los campos son obligatorios
+                                                </div>
+                                            </div>
+                                            <div id="success" class="col-12 d-none" >
+                                                <div class="alert alert-success">
+                                                    <i class="fa fa-check mx-3"></i>
+                                                Tu mensaje fue enviado, en breve nos comucamos con usted!.
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-xl-12">
+                                                <div class="form-floating form-section-col">
+                                                    <input type="text" id="nombre_cliente" class="form-control border-0"  placeholder="Nombre completo">
+                                                    <label for="name">Nombre completo</label>
+                                                    <div class="alert alert-primary p-1 d-none">
+                                                        <i class="fas fa-info-circle"></i>
+                                                        Este campo es obligatorio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-xl-12">
+                                                <div class="form-floating form-section-col">
+                                                    <input type="email" class="form-control border-0" id="email_cliente" placeholder="Correo Electrónico">
+                                                    <label for="email">Correo Electrónico</label>
+                                                    <div class="alert alert-primary p-1 d-none">
+                                                        <i class="fas fa-info-circle"></i>
+                                                        Este campo es obligatorio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-xl-6">
+                                                <div class="form-floating form-section-col">
+                                                    <input type="phone" class="form-control border-0" id="telefono_cliente" placeholder="Número de Teléfono">
+                                                    <label for="phone">Número de Teléfono</label>
+                                                    <div class="alert alert-primary p-1 d-none">
+                                                        <i class="fas fa-info-circle"></i>
+                                                        Este campo es obligatorio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-xl-6">
+                                                <div class="form-floating form-section-col">
+                                                    <input type="text" class="form-control border-0" id="asunto_cliente" placeholder="Subject">
+                                                    <label for="subject">Asunto</label>
+                                                    <div class="alert alert-primary p-1 d-none">
+                                                        <i class="fas fa-info-circle"></i>
+                                                        Este campo es obligatorio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-floating form-section-col" >
+                                                    <textarea class="form-control w-100 h-75" placeholder="Dejanos tu mensaje" id="mensaje_cliente" ></textarea>
+                                                    <label for="message">Dejanos tu mensaje y nosotros nos contactaremos.</label>
+                                                    <div class="alert alert-primary p-1 d-none">
+                                                        <i class="fas fa-info-circle"></i>
+                                                        Este campo es obligatorio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-5">
+                                                <div class="form-section-col">
+                                                    <button class="btn-white w-100 py-3 px-5" id="contacto_cliente">Enviar Mensaje</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal de contacto End -->
+
+
+
+
 
         <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
@@ -235,7 +334,7 @@
                             </div>
                             <div class="row g-4 align-items-center">
                                 <div class="col-sm-6">
-                                    <a href="#" class="btn  py-3 px-5 text-dark" style="background-color: white;"> <i class="fas fa-envelope mx-2"></i> <span>Contáctanos</span></a>
+                                    <a data-bs-toggle="modal" data-bs-target="#contactModal" class="btn  py-3 px-5 text-dark" style="background-color: white;"> <i class="fas fa-envelope mx-2"></i> <span>Contáctanos</span></a>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="d-flex flex-shrink-0 ps-4">
@@ -287,10 +386,10 @@
                                     <h3> Sucursal PueblaCalle Esmeralda S/N Miguel Negrete, Cuapiaxtla de Madero, Puebla.</h3>
                                     <ul class="text-white">
                                         <li>
-                                            Tel: 01 (249) 426 09 04
+                                             <a href="tel:+522494260904" class="text-white font-weight-bold">Tel.: 01 (249) 426 09 04</a>
                                         </li>
                                         <li>
-                                            Tel: 01 (249) 426 07 47
+                                            <a href="tel:+522494260747" class="text-white font-weight-bold">Tel.: 01 (249) 426 07 47</a>
                                         </li>
                                     </ul>
                                 </p>
@@ -310,17 +409,17 @@
                                     <h3>Sucursal UruapanCarretera Uruapan - Carapan. No. 5999</h3>
                                     <ul class="text-white">
                                         <li>
-                                            Ventas: (452) 112 39 73
+                                            Ventas: <a href="tel:+524521123973" class="text-white font-weight-bold"> (452) 112 39 73</a>
                                         </li>
                                         <li>
-                                            Oficina: (452) 528 21 03
+                                            Oficina: <a href="tel:+524525282103" class="text-white font-weight-bold">(452) 528 21 03</a>
                                         </li>
                                     </ul>
                                 </p>
                             </div>
                         </div>
                         <div class="ms-1">
-                            <button href="#" class="btn btn-dark py-3 px-5 ms-2"> <span>Contacto</span></button>
+                            <button data-bs-toggle="modal" data-bs-target="#contactModal" class="btn btn-dark py-3 px-5 ms-2"> <span>Contacto</span></button>
                         </div>
                     </div>
                 </div>

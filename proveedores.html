@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>CATÁLOGO</title>
+        <title>PLASTIMEGA SA DE CV</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -33,7 +33,7 @@
     <body>
 
         <!-- Spinner Start -->
-        <div id="spinner" class="d-print-none show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-dark" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="nav-bar px-0 py-lg-0 d-print-none" style="height: 80px;">
+                    <div class="nav-bar px-0 py-lg-0" style="height: 80px;">
                         <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
                             <a href="#" class="navbar-brand-2">
                                 <h1 class="text-primary mb-0">
@@ -111,10 +111,10 @@
                                             <a href="404.html" class="dropdown-item text-dark">404 Page</a>
                                         </div>
                                     </div> -->
-                                    <a href="contact.html" class="nav-item nav-link text-dark">Contacto</a>
+                                    <a href="contacto.html" class="nav-item nav-link text-dark">Contacto</a>
                                     <div class="nav-btn ps-3 px-4">
                                         <button class="btn-search btn bg-dark text-white border-white py-2 px-4 ms-0 ms-lg-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                                        <a href="#" class="btn bg-dark text-white border-white py-2 px-4 ms-0 ms-lg-3"> <span>Catálogo</span></a>
+                                        <a href="catalogo.html" class="btn bg-dark text-white border-white py-2 px-4 ms-0 ms-lg-3"> <span>Catálogo</span></a>
                                     </div>
                                     <div class="nav-shaps-1"></div>
                                 </div>
@@ -147,112 +147,166 @@
         <!-- Modal Search End -->
 
         <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb d-print-none">
+        <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
-                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Catálogo</h4>   
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Proveedores</h4>   
             </div>
         </div>
         <!-- Header End -->
 
         <!-- Contact Start -->
         <div class="container-fluid contact py-5">
-            <!-- codigo del catalogo -->
+            <div class="container py-5">
+                <div class="row g-5">
 
-            <section class="contenido">
-                <div class="mostrador" id="mostrador">
-                    <div class="fila">
-                        <div class="item" onclick="cargar(this)">
-                            <div class="contenedor-foto">
-                                <img src="img/cajas/1.png" alt="">
-                            </div>
-                            <p class="descripcion">NIKE AIR 97</p>
-                            <span class="precio">$ 1.300</span>
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
+                        <div class="form-section bg-dark p-5 h-100">
+                            <h1 class="display-4 text-white mb-4">Envianos un Mensaje</h1>
+                                <div class="row g-4">
+                                    <div id="error" class="col-12 d-none" >
+                                        <div class="alert alert-danger">
+                                            <i class="fa fa-info-circle"></i>
+                                            Todos los campos son obligatorios
+                                        </div>
+                                    </div>
+                                    <div id="success" class="col-12 d-none" >
+                                        <div class="alert alert-success">
+                                            <i class="fa fa-check mx-3"></i>
+                                        Tu mensaje fue enviado, en breve nos comucamos con usted!.
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-12">
+                                        <div class="form-floating form-section-col">
+                                            <input type="text" id="nombre_cliente" class="form-control border-0"  placeholder="Nombre completo">
+                                            <label for="name">Nombre completo</label>
+                                            <div class="alert alert-primary p-1 d-none">
+                                                <i class="fas fa-info-circle"></i>
+                                                Este campo es obligatorio
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-12">
+                                        <div class="form-floating form-section-col">
+                                            <input type="email" class="form-control border-0" id="email_cliente" placeholder="Correo Electrónico">
+                                            <label for="email">Correo Electrónico</label>
+                                            <div class="alert alert-primary p-1 d-none">
+                                                <i class="fas fa-info-circle"></i>
+                                                Este campo es obligatorio
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating form-section-col">
+                                            <input type="phone" class="form-control border-0" id="telefono_cliente" placeholder="Número de Teléfono">
+                                            <label for="phone">Número de Teléfono</label>
+                                            <div class="alert alert-primary p-1 d-none">
+                                                <i class="fas fa-info-circle"></i>
+                                                Este campo es obligatorio
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating form-section-col">
+                                            <input type="text" class="form-control border-0" id="asunto_cliente" placeholder="Subject">
+                                            <label for="subject">Asunto</label>
+                                            <div class="alert alert-primary p-1 d-none">
+                                                <i class="fas fa-info-circle"></i>
+                                                Este campo es obligatorio
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating form-section-col" >
+                                            <textarea class="form-control w-100 h-75" placeholder="Dejanos tu mensaje" id="mensaje_cliente" ></textarea>
+                                            <label for="message">Dejanos tu mensaje y nosotros nos contactaremos.</label>
+                                            <div class="alert alert-primary p-1 d-none">
+                                                <i class="fas fa-info-circle"></i>
+                                                Este campo es obligatorio
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-5">
+                                        <div class="form-section-col">
+                                            <button class="btn-white w-100 py-3 px-5" id="contacto_cliente">Enviar Mensaje</button>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
-                        <div class="item" onclick="cargar(this)">
-                            <div class="contenedor-foto">
-                                <img src="img/cajas/2.png" alt="">
-                            </div>
-                            <p class="descripcion" id>NIKE RUNNING TERRA </p>
-                            <span class="precio">$ 1.800</span>
-                        </div>
-                        <div class="item" onclick="cargar(this)">
-                            <div class="contenedor-foto">
-                                <img src="img/cajas/3.png" alt="">
-                            </div>
-                            <p class="descripcion">NIKE WINFLO 8
+                    </div>
+
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="mb-4">
+                            <h1 class="display-4 mb-4">Ponte en contacto con nosotros.</h1>
+                            <p class="mb-4">Estamos disponibles para resolver tus dudas, atender tus solicitudes o brindarte más información sobre nuestros productos. Completa el formulario o usa cualquiera de nuestros medios de contacto.
                             </p>
-                            <span class="precio">$ 3.600</span>
-                        </div>
-                        <div class="item" onclick="cargar(this)">
-                            <div class="contenedor-foto">
-                                <img src="img/cajas/4.png" alt="">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <a href="https://maps.app.goo.gl/3AquHkZNfy34Tn3s8" target="_blank" class="text-dark">
+                                    
+                                        <div class="bg-white d-flex">
+                                            <i class="fas fa-map-marker-alt fa-2x text-dark me-2"></i>
+                                            <div>
+                                                <h4> 
+                                                    Dirección Puebla
+                                                </h4>
+                                                <p class="mb-0">
+                                                    <b>PLÁSTICOS MEXICANOS GAITÁN S.A. DE C.V.</b> <br>
+                                                    Sucursal Puebla Calle Esmeralda S/N Miguel Negrete, Cuapiaxtla de Madero, Puebla.
+                                                </p>
+                                                </div>
+                                        </div>
+                                     </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-white d-flex">
+                                        <i class="fas fa-envelope fa-2x text-dark me-2"></i>
+                                        <div>
+                                            <h4>Correos Electrónicos</h4>
+                                            <a href="mailto:mperez@plastimega.com.mx" class="mb-0 text-dark">mperez@plastimega.com.mx</a> <br>
+                                            <a href="mailto:contacto@plastimega.com.mx" class="mb-o text-dark">contacto@plastimega.com.mx</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-white d-flex">
+                                        <i class="fa fa-phone-alt fa-2x text-dark me-2"></i>
+                                        <div>
+                                            <h4>Teléfonos: </h4>
+                                            <a href="tel:+522227209284" class="mb-0 text-dark">2227209284</a> <br>
+                                            <a href="tel:+522494260904" class="text-dark">2494260904</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a href="https://maps.app.goo.gl/3Rb6GdcEEEar5hP86" target="_blank" class="text-dark">
+                                        <div class="bg-white d-flex">
+                                            <i class="fas fa-map-marker-alt fa-2x text-dark me-2"></i>
+                                            <div>
+                                                <h4> 
+                                                    Dirección Michoacán
+                                                </h4>
+                                                <p class="mb-0">
+                                                    <b>PLÁSTICOS MEXICANOS GAITÁN S.A. DE C.V.</b> <br>
+                                                    Sucursal Uruapan, Carretera Uruapan - Carapan. No. 5999 Col.
+                                                </p>
+                                                </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                            <p class="descripcion">NIKE LOW-TOP</p>
-                            <span class="precio">$ 1.800</span>
+                        </div>
+                        <div class="d-flex ms-2 mb-5">
+                            <a class="btn btn-dark py-2 px-3 px-sm-4 me-2" target="_blank" href="https://www.facebook.com/PlastimegaMX/"> <span>Facebook</span> <i class="fas fa-chevron-circle-right"></i></a>
+                            <a class="btn btn-dark py-2 px-3 px-sm-4 ms-2" target="_blank" href="https://www.instagram.com/plastimegamx/?hl=es"> <span>Instagram</span> <i class="fas fa-chevron-circle-right"></i></a>
                         </div>
                     </div>
-                    <div class="fila">
-                        <div class="item bg-light" onclick="cargar(this)">
-                            <div class="contenedor-foto">
-                                <img src="img/cajas/6.png" alt="">
-                            </div>
-                            <p class="descripcion">Caja</p>
-                            <span class="precio">$ 130</span>
-                        </div>
-                        <div class="item" onclick="cargar(this)">
-                            <div class="contenedor-foto">
-                                <img src="img/cajas/7.png" alt="">
-                            </div>
-                            <p class="descripcion">caja</p>
-                            <span class="precio">$ 2.000</span>
-                        </div>
-                        <div class="item" onclick="cargar(this)">
-                            <div class="contenedor-foto">
-                                <img src="img/cajas/8.png" alt="">
-                            </div>
-                            <p class="descripcion">caja</p>
-                            <span class="precio">$ 2.500</span>
-                        </div>
-                        <div class="item" onclick="cargar(this)">
-                            <div class="contenedor-foto">
-                                <img src="img/cajas/9.png" alt="">
-                            </div>
-                            <p class="descripcion">caja</p>
-                            <span class="precio">$ 1.800</span>
-                        </div>
-                    </div> 
+                    
+                    <div class="col-12 wow fadeInUp" data-wow-delay="0.2s">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d870.4705284667693!2d-97.83525831443704!3d18.952876689142794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cf8bb6670fe5f3%3A0x930d929e055df004!2sPLASTIMEGA%20Planta%20Puebla!5e1!3m2!1ses-419!2smx!4v1744326375151!5m2!1ses-419!2smx" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
-                <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
-                <div class="seleccion" id="seleccion">
-                    <div class="cerrar" onclick="cerrar()">
-                        &#x2715
-                    </div>
-                    <div class="info">
-                        <img src="img/1.png" alt="" id="img">
-                        <h2 id="modelo">NIKE MODEL 1</h2>
-                        <p id="descripcion">Descripción Modelo 1</p>
-        
-                        <span class="precio" id="precio">$ 130</span>
-        
-                        <!-- <div class="fila">
-                            <div class="size">
-                                <label for="">SIZE</label>
-                                <select name="" id="">
-                                    <option value="">40</option>
-                                    <option value="">42</option>
-                                    <option value="">44</option>
-                                    <option value="">46</option>
-                                </select>
-                            </div>
-                            <button>AGREGAR AL CARRITO</button>
-                        </div> -->
-                    </div>
-                </div>
-            </section>
-
-
-
-            <!-- codigo del catalogo -->
+            </div>
         </div>
         <!-- Contact End -->
 
@@ -268,10 +322,8 @@
                     </div> -->
                     <div class="col-lg-12">
                         <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
-                            <a class="btn btn-primary btn-md-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-primary btn-md-square me-3" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-primary btn-md-square me-3" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-primary btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-md-square me-3" href="https://www.facebook.com/PlastimegaMX/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-md-square me-3" href="https://www.instagram.com/plastimegamx/?hl=es"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
