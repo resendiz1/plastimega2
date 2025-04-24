@@ -157,6 +157,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 });
 
 
+
+
+
 document.addEventListener("keyup", function(e) {
     if (e.key === "PrintScreen") {
 
@@ -289,7 +292,7 @@ function cargar(item){
     mostrador.style.width = "60%";
     seleccion.style.width = "40%";
     seleccion.style.opacity = "1";
-    item.style.border = "2px solid blue";
+    item.style.border = "2px solid rgb(16, 34, 99)";
 
     imgSeleccionada.src = item.getElementsByTagName("img")[0].src;
 
