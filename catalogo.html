@@ -98,7 +98,7 @@
                                     <a href="index.html" class="nav-item nav-link text-dark active">Inicio</a>
                                     <a href="about.html" class="nav-item nav-link text-dark">Nosotros</a>
                                     <a href="proveedores.html" class="nav-item nav-link text-dark">Proveedores</a>
-                                    <a href="contacto.html" class="nav-item nav-link ">Contacto</a>
+                                    <a href="contacto.html" class="nav-item nav-link text-dark ">Contacto</a>
                                     <!-- <a href="course.html" class="nav-item nav-link text-dark">Courses</a>
                                     <a href="blog.html" class="nav-item nav-link text-dark">Blogs</a>
                                     <div class="nav-item dropdown">
@@ -114,7 +114,7 @@
                                     </div> -->
                                     <div class="nav-btn ps-3 px-4">
                                         <button class="btn-search btn bg-dark text-white border-white py-2 px-4 ms-0 ms-lg-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                                        <a href="#" class="btn bg-dark text-white border-white py-2 px-4 ms-0 ms-lg-3"> <span>Catálogo</span></a>
+                                        <a href="#" class="btn bg-white text-dark border-white py-2 px-4 ms-0 ms-lg-3"> <span>Catálogo</span></a>
                                     </div>
                                     <div class="nav-shaps-1"></div>
                                 </div>
@@ -135,11 +135,113 @@
                         <h5 class="modal-title" id="exampleModalLabel">Busca por palabra clave en el sitio</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body d-flex align-items-center bg-dark">
+                    <div class="modal-body align-items-center bg-dark">
                         <div class="input-group w-75 mx-auto d-flex">
                             <input type="search" class="form-control p-3" placeholder="Palabra clave" aria-describedby="search-icon-1">
                             <span id="search-icon-1" class="btn bg-light border nput-group-text p-3"><i class="fa fa-search"></i></span>
                         </div>
+                                                    <!-- catalogo Start -->
+                            <div class="container-fluid contact py-5">
+                                <!-- codigo del catalogo -->
+
+                                <section class="contenido">
+                                    <div class="mostrador" id="mostrador">
+                                        <div class="fila">
+                                            <div class="item" onclick="cargar(this)">
+                                                <div class="contenedor-foto">
+                                                    <img src="img/cajas/1.png" alt="">
+                                                </div>
+                                                <p class="descripcion">Caja</p>
+                                                <span class="precio">$ 1.300</span>
+                                            </div>
+                                            <div class="item" onclick="cargar(this)">
+                                                <div class="contenedor-foto">
+                                                    <img src="img/cajas/2.png" alt="">
+                                                </div>
+                                                <p class="descripcion" id>Caja </p>
+                                                <span class="precio">$ 1.800</span>
+                                            </div>
+                                            <div class="item" onclick="cargar(this)">
+                                                <div class="contenedor-foto">
+                                                    <img src="img/cajas/3.png" alt="">
+                                                </div>
+                                                <p class="descripcion">Caja
+                                                </p>
+                                                <span class="precio">$ 3.600</span>
+                                            </div>
+                                            <div class="item" onclick="cargar(this)">
+                                                <div class="contenedor-foto">
+                                                    <img src="img/cajas/4.png" alt="">
+                                                </div>
+                                                <p class="descripcion">Caja</p>
+                                                <span class="precio">$ 1.800</span>
+                                            </div>
+                                        </div>
+                                        <div class="fila">
+                                            <div class="item" onclick="cargar(this)">
+                                                <div class="contenedor-foto">
+                                                    <img src="img/cajas/6.png" alt="">
+                                                </div>
+                                                <p class="descripcion">Caja</p>
+                                                <span class="precio">$ 130</span>
+                                            </div>
+                                            <div class="item" onclick="cargar(this)">
+                                                <div class="contenedor-foto">
+                                                    <img src="img/cajas/7.png" alt="">
+                                                </div>
+                                                <p class="descripcion">caja</p>
+                                                <span class="precio">$ 2.000</span>
+                                            </div>
+                                            <div class="item" onclick="cargar(this)">
+                                                <div class="contenedor-foto">
+                                                    <img src="img/cajas/8.png" alt="">
+                                                </div>
+                                                <p class="descripcion">caja</p>
+                                                <span class="precio">$ 2.500</span>
+                                            </div>
+                                            <div class="item" onclick="cargar(this)">
+                                                <div class="contenedor-foto">
+                                                    <img src="img/cajas/9.png" alt="">
+                                                </div>
+                                                <p class="descripcion">caja</p>
+                                                <span class="precio">$ 1.800</span>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+                                    <div class="seleccion" id="seleccion">
+                                        <div class="cerrar" onclick="cerrar()">
+                                            &#x2715
+                                        </div>
+                                        <div class="info">
+                                            <img src="img/1.png" alt="" id="img">
+                                            <h2 id="modelo">NIKE MODEL 1</h2>
+                                            <p id="descripcion">Descripción Modelo 1</p>
+                            
+                                            <span class="precio" id="precio">$ 130</span>
+                            
+                                            <!-- <div class="fila">
+                                                <div class="size">
+                                                    <label for="">SIZE</label>
+                                                    <select name="" id="">
+                                                        <option value="">40</option>
+                                                        <option value="">42</option>
+                                                        <option value="">44</option>
+                                                        <option value="">46</option>
+                                                    </select>
+                                                </div>
+                                                <button>AGREGAR AL CARRITO</button>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </section>
+
+
+
+                                <!-- codigo del catalogo -->
+                            </div>
+                            <!-- catalogo End -->
+
                     </div>
                 </div>
             </div>
@@ -154,7 +256,7 @@
         </div>
         <!-- Header End -->
 
-        <!-- Contact Start -->
+        <!-- catalogo Start -->
         <div class="container-fluid contact py-5">
             <!-- codigo del catalogo -->
 
@@ -254,7 +356,7 @@
 
             <!-- codigo del catalogo -->
         </div>
-        <!-- Contact End -->
+        <!-- catalogo End -->
 
         <!-- Footer Start -->
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
