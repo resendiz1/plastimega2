@@ -1,4 +1,19 @@
+a {
+    display: inline-block; /* Necesario para que transform funcione bien */
+    transition: transform 0.4s ease; /* Suaviza la animación */
+}
+
+a:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en 10% */
+}
+.text-justify{
+    text-align: justify;
+}
+
+
 /*** Estilos del catalogo ***/
+
+
 
 
 
@@ -6,7 +21,7 @@
     max-width: 1100px;
     width: 100;
     margin: 40px auto;
-    display: flex;
+    display:flex;
 }
 
 .mostrador{
@@ -79,6 +94,14 @@
     color: gray;
     margin-bottom: 10px;
 }
+
+@media print{
+    .info h2{
+        margin-bottom: 10px;
+    }
+
+}
+
 .info p{
     font-size: 14px;
     color: gray;
@@ -959,7 +982,7 @@
 
 .feature-carousel .owl-nav .owl-prev:hover,
 .feature-carousel .owl-nav .owl-next:hover {
-    background: var(--bs-primary);
+    background: var(--bs-gray);
     color: var(--bs-white);
 }
 /*** Features End ***/
@@ -1469,8 +1492,8 @@
 }
 
 .footer .footer-item a:hover {
-    letter-spacing: 1px;
-    color: var(--bs-primary);
+    letter-spacing: .5px;
+    color: var(--bs-white);
 }
 
 .footer .footer-item .footer-btn a {

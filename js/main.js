@@ -289,8 +289,9 @@ let precioSeleccionado = document.getElementById("precio");
 
 function cargar(item){
     quitarBordes();
-    mostrador.style.width = "60%";
-    seleccion.style.width = "40%";
+    mostrador.style.width = "50%";
+    seleccion.style.width = "50%";
+    seleccion.style.height="50%"
     seleccion.style.opacity = "1";
     item.style.border = "2px solid rgb(16, 34, 99)";
 
@@ -298,7 +299,6 @@ function cargar(item){
 
     modeloSeleccionado.innerHTML =  item.getElementsByTagName("p")[0].innerHTML;
 
-    descripSeleccionada.innerHTML = "Descripción del modelo ";
 
     precioSeleccionado.innerHTML =  item.getElementsByTagName("span")[0].innerHTML;
 
@@ -316,6 +316,7 @@ function quitarBordes(){
         items[i].style.border = "none";
     }
 }
+
 
 
 
