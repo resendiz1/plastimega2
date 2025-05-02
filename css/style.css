@@ -24,6 +24,8 @@ a:hover {
     display:flex;
 }
 
+
+
 .mostrador{
     width: 100%;
     transition: .5s ease;
@@ -32,6 +34,7 @@ a:hover {
 .mostrador .fila{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .mostrador .fila .item{
@@ -337,7 +340,9 @@ a:hover {
     .navbar-brand-2 {
         display: none;
     }
+
 }
+
 
 @media (max-width: 991px) {
     .header-top {
@@ -388,6 +393,16 @@ a:hover {
     .navbar .navbar-collapse {
         margin-top: -20px;
     }
+
+    .contenido{
+        max-width: 900px;
+        width: 100;
+        margin: 40px auto;
+        display:block;
+    }
+
+
+
 
 }
 

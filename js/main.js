@@ -289,8 +289,8 @@ let precioSeleccionado = document.getElementById("precio");
 
 function cargar(item){
     quitarBordes();
-    mostrador.style.width = "50%";
-    seleccion.style.width = "50%";
+    mostrador.style.width = "100%";
+    seleccion.style.width = "100%";
     seleccion.style.height="50%"
     seleccion.style.opacity = "1";
     item.style.border = "2px solid rgb(16, 34, 99)";
@@ -324,3 +324,34 @@ function quitarBordes(){
 }
 
 
+{
+    document.getElementById('buscador').addEventListener('keyup', function () {
+        const filtro = this.value.toLowerCase();
+        const items = document.querySelectorAll('.item');
+        let encontrados = 0;
+
+        items.forEach(item => {
+            const descripcion = item.getAttribute('data-descripcion').toLowerCase();
+
+            if (descripcion.includes(filtro)) {
+                item.style.display = 'block';
+                encontrados++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        // Mostrar u ocultar el mensaje
+        const mensaje = document.getElementById('mensaje-no-encontrado');
+        if (encontrados === 0) {
+            mensaje.style.display = 'block';
+        } else {
+            mensaje.style.display = 'none';
+        }
+
+
+
+    });
+
+
+}
