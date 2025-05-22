@@ -636,8 +636,8 @@ a:hover {
 }
 
 .hero-bg-half-1 {
-    background-image: url(../img/plastimega/fondo_plasti.jpg);
-    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-image: url(../img/utilidades/DJI_0132.JPG);
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
     filter: grayscale(15%);
     transform: scale(100% - 50%);
     background-position: center right;
@@ -651,7 +651,7 @@ a:hover {
 }
 
 .hero-bg-half-2 {
-    background-image: url(../img/plastimega/plastimega3.jpg);
+    background-image: url(../img/utilidades/DJI_0180.JPG);
     clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
     filter: grayscale(15%);
     transform: scale(100% - 50%);
