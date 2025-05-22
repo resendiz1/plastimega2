@@ -209,10 +209,15 @@ document.addEventListener("keyup", function(e) {
    let $mensaje = document.getElementById('mensaje_cliente');
    let $error = document.getElementById('error');
    let $success = document.getElementById('success');
+   let $botton = document.getElementById('contacto_cliente');
 
 
 
-document.getElementById('contacto_cliente').addEventListener('click', ()=>{
+    $botton.addEventListener('click', ()=>{
+
+        $botton.innerHTML = '<img src="img/loader.webp" style="width: 30px;" alt="">';
+
+
 
     console.log($nombre.value)
 
@@ -221,8 +226,8 @@ document.getElementById('contacto_cliente').addEventListener('click', ()=>{
         $error.classList.remove('d-none');
         setTimeout(()=>{
         $error.classList.add('d-none');
-
-        }, 5000)
+        $botton.innerHTML = 'Enviar Mensaje';
+        }, 3000)
     
     }
     else{
