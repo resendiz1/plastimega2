@@ -789,7 +789,7 @@ a:hover {
         height: 100%;
         top: 0;
         left: -400px;
-        background: var(--bs-primary);
+        background: var(--bs-dark);
         transform: skew(28deg);
     }
 
