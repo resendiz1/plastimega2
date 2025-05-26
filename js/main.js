@@ -215,9 +215,7 @@ document.addEventListener("keyup", function(e) {
 
     $botton.addEventListener('click', ()=>{
 
-        $botton.innerHTML = '<img src="img/loader.webp" style="width: 30px;" alt="">';
-
-
+    $botton.innerHTML = '<img src="img/loader.webp" style="width: 30px;" alt="">';
 
     console.log($nombre.value)
 
@@ -255,7 +253,7 @@ document.addEventListener("keyup", function(e) {
                 $success.classList.add('d-none');
             }, 5000);
 
-
+            $botton.innerHTML = 'Enviar Mensaje';
             console.log(response.status);
 
             
