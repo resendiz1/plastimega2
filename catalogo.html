@@ -33,7 +33,7 @@
     <body>
 
         <!-- Spinner Start -->
-        <div id="spinner" class="d-print-none show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner" class="d-print-none d-print-nones show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-dark" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="nav-bar px-0 py-lg-0 d-print-none" style="height: 80px;">
+                    <div class="nav-bar px-0 py-lg-0 d-print-none d-print-nones" style="height: 80px;">
                         <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
                             <a href="#" class="navbar-brand-2">
                                 <h1 class="text-primary mb-0">
@@ -149,7 +149,7 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center d-print-none">
+            <div class="row justify-content-center d-print-none d-print-nones">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-8 text-center  mt-5">
                     <div class="input-group w-75 mx-auto d-flex">
                         <input type="search" id="buscador" class="form-control p-3" placeholder="Buscar ... " aria-describedby="search-icon-1" autofocus>
@@ -1270,7 +1270,7 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid footer py-5 wow fadeIn d-print-none" data-wow-delay="0.2s">
+    <div class="container-fluid footer py-5 wow fadeIn d-print-none d-print-nones" data-wow-delay="0.2s">
         <div class="container py-5">
             <div class="row g-5 mb-5 align-items-center">
                 <!-- <div class="col-lg-7">
@@ -1491,7 +1491,7 @@
 
 
         <!-- Back to Top -->
-        <div class="back-to-top d-print-none">
+        <div class="back-to-top d-print-none d-print-nones">
             <a href="#" class="btn"><i class="fa fa-arrow-up"></i></a>  
         </div> 
 
@@ -1507,6 +1507,7 @@
         <script>
 
             const save_pdf = document.getElementById('save_pdf');
+            const ocultos = document.querySelectorAll('.btn');
            
             save_pdf.addEventListener('click', () => {
            
@@ -1524,24 +1525,30 @@
            
            
              function descargarPDF() {
-               var element = document.getElementById('contenedor_print'); // o `document.getElementById('miDiv')`
-           
-               var opt = {
-                 margin:       3,
-                 filename:     "CATÁLOGO PLASTIMEGA 2025",
-                 image:        { type: 'jpeg', quality: 0.98 },
-                 html2canvas:  { scale: 2 },
-                 jsPDF:        { unit: 'mm', format: [300, 380], orientation: 'portrait' },
-                 ignoreElements: (element) => {
-                     return element.classList && element.classList.contains('d-print-none');
-                    }
+                const contenedor = document.getElementById('contenedor_print');
 
+                // Ocultar temporalmente los elementos con la clase 'd-print-none'
+                const ocultos = contenedor.querySelectorAll('.btn');
+                ocultos.forEach(el => el.style.display = 'none');
 
+                // Generar el PDF
+                html2pdf().set({
+                margin: 3,
+                filename: "CATÁLOGO PLASTIMEGA 2025.pdf",
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: [300, 380], orientation: 'portrait' }
+                }).from(contenedor).save().then(() => {
+                // ✅ PDF generado y descarga iniciada
+                console.log("PDF descargado.");
 
-               };
-           
-               html2pdf().set(opt).from(element).save();
-             }
+                // Restaurar visibilidad
+                ocultos.forEach(el => el.style.display = '');
+
+                // Podés mostrar una notificación, deshabilitar botón, etc.
+                alert("¡Descarga completada!");
+                });
+            }
            </script>
 
         <!-- Template Javascript -->

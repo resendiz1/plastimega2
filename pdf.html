@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo PDF</title>
+  <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  <style>
+    .d-print-none {
+      background: red;
+      color: white;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="contenedor_print">
+    <h1>CATÁLOGO PLASTIMEGA 2025</h1>
+    <p>Este contenido aparecerá en el PDF</p>
+
+    <div class="d-print-none">
+      ❌ Esto NO debe aparecer en el PDF
+    </div>
+
+    <p>Este sí aparece.</p>
+  </div>
+
+  <button onclick="descargarPDF()">Descargar PDF</button>
+
+  <script>
+    function descargarPDF() {
+      var element = document.getElementById('contenedor_print');
+
+      const ocultos = contenedor.querySelectorAll('.btn');
+      ocultos.forEach(el => el.style.display = 'none');
+
+      var opt = {
+        margin: 3,
+        filename: "CATÁLOGO PLASTIMEGA 2025.pdf",
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: [300, 380], orientation: 'portrait' },
+      };
+
+      html2pdf().set(opt).from(element).save();
+      ocultos.forEach(el => el.style.display = '');
+    }
+  </script>
+
+</body>
+</html>
