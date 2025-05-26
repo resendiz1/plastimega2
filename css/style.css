@@ -1,3 +1,30 @@
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20rem;  /* o el tamaño que desees */
+    height: 20rem;
+    background-size: 100% 100%; /* ajusta el tamaño de fondo al contenedor */
+    opacity: 0.2;
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+
+
+@media print{
+    .btn-group{
+        display: none;
+    }
+
+    .modal{
+        display: none;
+    }
+}
+
+
 a {
     display: inline-block; /* Necesario para que transform funcione bien */
     transition: transform 0.4s ease; /* Suaviza la animación */
