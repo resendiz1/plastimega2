@@ -128,36 +128,36 @@
 
 
         <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb text-center p-2">
+        <!-- <div class="container-fluid bg-breadcrumb text-center p-2">
                 <img src="img/plastimega/logo.png" class="img-fluid d-none d-print-block" alt="" style="width: 140px;">
                 <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Catálogo</h4>   
-        </div>
+        </div> -->
         <!-- Header End -->
 
-                <!-- {{-- boton de imprimir --}} -->
-        <div class="container my-2">
-        <div class="row px-0">
-            <div class="col-12 text-center">
-                <div class="btn-group">
-                    <button  class="btn btn-sm" style="background-color: rgb(3, 3, 46); color: white;" id="save_pdf">
-                        <i class="fa fa-file-pdf"></i>
-                        DESCARGAR PDF
-                    </button>
-                </div>
-            </div>
-        </div>
-        </div>
-        <!-- {{-- boton de imprimir --}} -->
 
 
         <!-- catalogo Start -->
-        <div class="container-fluid contact" id="contenedor_print">
+        <div class="container-fluid " id="contenedor_print">
+            <div class="row">
+                <div class="container-fluid bg-breadcrumb text-center p-2">
+                        <img src="img/plastimega/logo.png" class="img-fluid d-none d-print-block" alt="" style="width: 140px;">
+                        <h4 class="text-white display-4 mb-4 wow" data-wow-delay="0.1s">Catálogo</h4>   
+                </div>
+            </div>
 
             <div class="row justify-content-center d-print-none">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-8 text-center  mt-5">
                     <div class="input-group w-75 mx-auto d-flex">
                         <input type="search" id="buscador" class="form-control p-3" placeholder="Buscar ... " aria-describedby="search-icon-1" autofocus>
                         <span id="search-icon-1" class="btn bg-light border nput-group-text p-3"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+                <div class="col-5 text-center m-2">
+                    <div class="btn-group">
+                        <button  class="btn btn-sm flotante" style="background-color: rgb(3, 3, 46); color: white;" id="save_pdf">
+                            <i class="fa fa-file-pdf"></i>
+                            DESCARGAR PDF
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1531,14 +1531,14 @@
                var element = document.getElementById('contenedor_print'); // o `document.getElementById('miDiv')`
            
                var opt = {
-                 margin:       0,
+                 margin:       3,
                  filename:     "CATÁLOGO PLASTIMEGA 2025",
                  image:        { type: 'jpeg', quality: 0.98 },
                  html2canvas:  { scale: 2 },
-                 jsPDF:        { unit: 'mm', format: [300, 350], orientation: 'portrait' },
-                 ignoreElements: (element)=>{
-                    return element.classList && element.classList.contains('d-print-none')
-                 }
+                 jsPDF:        { unit: 'mm', format: [300, 400], orientation: 'portrait' },
+                 ignoreElements: (element) => {
+                     return element.classList && element.classList.contains('d-print-none');
+                    }
 
 
 
