@@ -319,11 +319,20 @@ document.addEventListener("keyup", function(e) {
 }
 
 
-  const navbar = document.querySelector('.custom-navbar');
 
+    function actualizarNavbar() {
 
-  window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY || document.documentElement.scrollTop;
-  let opacity = Math.min(scrollY / 200, 1);
-  document.querySelector('.custom-navbar').style.backgroundColor = `rgba(12, 24, 68, ${opacity})`;
-});
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        const navbar = document.querySelector('.custom-navbar');
+        let opacity = Math.min(scrollY / 500, 3); // ajusta el divisor según qué tan rápido querés que se opaque
+        navbar.style.backgroundColor = `rgba(12, 24, 68, ${opacity})`; // azul marino con opacidad gradual
+
+    }
+
+    // Ejecutar al cargar la página
+    window.addEventListener('DOMContentLoaded', actualizarNavbar);
+    window.addEventListener('load', actualizarNavbar);
+
+    // Ejecutar cuando se hace scroll
+    window.addEventListener('scroll', actualizarNavbar);
+    window.addEventListener('touchmove', actualizarNavbar);
