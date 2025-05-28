@@ -284,6 +284,9 @@ document.addEventListener("keyup", function(e) {
 
 
 {
+    if(document.getElementById('buscador')){
+
+
     document.getElementById('buscador').addEventListener('keyup', function () {
         const filtro = this.value.toLowerCase();
         const items = document.querySelectorAll('.item');
@@ -311,6 +314,16 @@ document.addEventListener("keyup", function(e) {
 
 
     });
-
+    }
 
 }
+
+
+  const navbar = document.querySelector('.custom-navbar');
+
+
+  window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY || document.documentElement.scrollTop;
+  let opacity = Math.min(scrollY / 200, 1);
+  document.querySelector('.custom-navbar').style.backgroundColor = `rgba(12, 24, 68, ${opacity})`;
+});
