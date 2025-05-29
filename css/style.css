@@ -1144,7 +1144,6 @@ a:hover {
 
 .courses-item .courses-item-inner {
     position: relative;
-    transform: skew(4deg);
     margin: 0 15px;
     background: rgba(241, 241, 241, 0.911);
     transition: 0.5s;
@@ -1155,7 +1154,7 @@ a:hover {
 }
 
 .courses-item .courses-item-inner:hover {
-    transform: skew(-4deg);
+
 }
 
 .courses-item .courses-item-inner .data-info .courses-trainer {
