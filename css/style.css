@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
+.lexend{
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
 
-
+/* Las nav.pills de la vision, mision etc */
 .nav-pills .nav-link.active {
     background-color: #0c1844;
     color: white;
@@ -9,6 +14,10 @@
     border-radius: 5px;
 }
 
+/* Las nav.pills de la vision, mision etc */
+
+
+/* el gradient, tipo de letra de el carousel del inicio */
 .gradient-overlay {
     position: absolute;
     bottom: 0;
@@ -30,11 +39,10 @@
 
 
 
-.lexend{
-  font-family: "Lexend", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
+
+
+/* el gradient, tipo de letra de el carousel del inicio */
+
 
 /* Enlace con subrayado animado */
 .nav-link-efecto {
@@ -61,9 +69,6 @@
   width: 100%;
 }
 
-.nav-link-efecto:hover {
-  color: #FFD700; /* opcional: cambia color del texto al pasar mouse */
-}
 
 html, body {
   margin: 0;
@@ -724,13 +729,12 @@ a:hover {
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(12, 24, 68, 0.7), rgba(12, 24, 68, 0.7)), url(../img/empresa/3.jpg);
+    background: rgb(12, 24, 68);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 60px 0 60px 0;
     transition: 0.5s;
-    background-color: #d3d3d3;
 }
 
 .bg-breadcrumb .breadcrumb {
@@ -953,8 +957,17 @@ a:hover {
 }
 .pdf {
     position: relative;
+    background: linear-gradient(rgba(42, 148, 219, 0.5), rgba(15, 27, 71, 0.9)), url(../img/utilidades/IMG_4532.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-    background: linear-gradient(rgba(248, 248, 248, 0.5), rgba(0, 19, 87, 0.9)), url(../img/empresa/3.jpg);
+.politica {
+    position: relative;
+    background: linear-gradient(rgba(12, 24, 68, 0.95), rgba(15, 27, 71, 0.95)), url(../img/utilidades/IMG_4424.jpg);
+    background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1346,10 +1359,21 @@ a:hover {
 /*** Blog End ***/
 
 /*** Explore Fitness Start ***/
+.mapa {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(12, 24, 68, 1), rgb(12, 24, 68, 1)), url(../img/utilidades/IMG_4513.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .explore {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(12, 24, 68, 0.7), rgba(12, 24, 68, 0.7)), url(../img/empresa/3.jpg);
+    background: linear-gradient(rgba(12, 24, 68, .8), rgb(12, 24, 68, 0.8)), url(../img/utilidades/IMG_4513.jpg);
+    background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

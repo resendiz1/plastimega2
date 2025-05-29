@@ -198,8 +198,9 @@ document.addEventListener("keyup", function(e) {
 
 
 
+
   //validacion de los datos del formulario
-  if(document.getElementById('contacto_cliente')){
+  if(document.getElementById('contacto_clientes')){
 
   
    let $nombre = document.getElementById('nombre_cliente');
@@ -207,13 +208,15 @@ document.addEventListener("keyup", function(e) {
    let $telefono = document.getElementById('telefono_cliente');
    let $asunto = document.getElementById('asunto_cliente');
    let $mensaje = document.getElementById('mensaje_cliente');
-   let $error = document.getElementById('error');
+   let $error = document.getElementById('errores');
    let $success = document.getElementById('success');
-   let $botton = document.getElementById('contacto_cliente');
+   let $botton = document.getElementById('contacto_clientes');
 
 
 
     $botton.addEventListener('click', ()=>{
+
+
 
     $botton.innerHTML = '<img src="img/loader.webp" style="width: 30px;" alt="">';
 

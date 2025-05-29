@@ -32,119 +32,67 @@
 
     <body>
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="d-print-none d-print-nones show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-dark" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+
 
         <!-- Navbar & Hero Start -->
-        <div class="container-fluid header-top">
-            <div class="nav-shaps-2"></div>
-            <div class="container d-flex align-items-center">
-                <div class="d-flex align-items-center h-100">
-                    <a href="#" class="navbar-brand" style="height: 125px;">
-                        <img src="img/plastimega/logo.png" style="width: 200px;" alt="">
-                        <!-- <h1 class="text-white mt-2 mb-0"></i>PlastiMega</h1> -->
-                        <!-- <img src="img/logo.png" alt="Logo"> -->
+        <nav class="container-fluid custom-navbar fixed-top lexend bg-dark" id="inicio">
+            <div class="row">
+                <div class="col-12 col-sm-10 col-md-4 col-lg-2">
+                    <img src="img/plastimega/logo.png" class="img-fluid p-3" alt="">
+                </div>
+                <div class="col-12 col-sm-10 col-md-4 col-lg-3 d-flex align-items-center  justify-content-center mt-1">
+                </div>
+
+                <div class="col-12 col-sm-10 col-md-4 col-lg-auto d-flex align-items-center  justify-content-center mt-1">
+                    <a href="index.html" class="text-white nav-link-efecto">Inicio</a>
+                </div>
+
+                <!-- Submenú Nosotros -->
+                <div class="col-12 col-sm-10 col-md-4 col-lg-auto d-flex align-items-center justify-content-center position-relative">
+                    <div class="dropdown">
+                        <a href="#about" class="text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu bg-white ">
+                            <li><a class="dropdown-item py-1" href="#sucursales">Sucursales</a></li>
+                            <li><a class="dropdown-item py-1" href="#compromiso">Compromiso</a></li>
+                            <li><a class="dropdown-item py-1" href="#politica">Política de calidad</a></li>
+                            <li><a class="dropdown-item py-1" href="#ubicacion">Ubicación</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-10 col-md-4 col-lg-auto d-flex align-items-center  justify-content-center mt-1">
+                    <a href="#contacto" class="text-white nav-link-efecto">Contacto</a>
+                </div>
+
+                <div class="col-12 col-sm-10 col-md-4 col-lg-auto d-flex align-items-center  justify-content-center mt-1">
+                    <a href="#proveedores" class="text-white nav-link-efecto">Proveedores</a>
+                </div>
+
+                <div class="col-12 col-sm-10 col-md-4 col-lg-auto d-flex align-items-center  justify-content-center mt-1">
+                    <a href="proveedores.html" class="text-white nav-link-efecto">Seguridad Industrial</a>
+                </div>
+
+                <div class="col-12 col-sm-10 col-md-4 col-lg-2 d-flex align-items-center justify-content-end ">
+                    <a href="catalogo.html" class="text-white nav-link-efecto">
+                        <i class="fa fa-list mx-2"></i>
+                        Catálogo
                     </a>
                 </div>
-                <div class="w-100 h-100">
-                    <div class="topbar px-0 py-2 d-none d-lg-block" style="height: 45px;">
-                        <div class="row gx-0 align-items-center">
-                            <div class="col-lg-8 text-center text-lg-center mb-lg-0">
-                                <div class="d-flex flex-wrap">
-                                    <div class="pe-4">
-                                        <a href="mailto:ventaspuebla@plastimega.com.mx" class="text-white small"><i class="fas fa-envelope text-white me-2"></i>
-                                            ventaspuebla@plastimega.com.mx
-                                        </a>
-                                    </div>
-                                    <div class="pe-0">
-                                        <span class="text-white small"><i class="fa fa-clock text-white me-2"></i>Lun - Sab: 8.00 am - 5.00 pm</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 text-center text-lg-end">
-                                <div class="d-flex justify-content-end">
-                                    <!-- <div class="d-flex align-items-center small">
-                                        <a href="#" class="login-btn text-body me-3 pe-3"> <span>Login</span></a>
-                                        <a href="#" class="text-body me-3"> Register</a>
-                                    </div> -->
-                                    <div class="d-flex pe-3">
-                                        <!-- <a class="btn p-0 text-white me-3" target="_blank" href="https://www.facebook.com/PlastimegaMX/"><i class="fab fa-facebook-f"></i></a> -->
-                                        <a class="btn p-0 text-white me-3" target="_blank" href="https://www.tiktok.com/@plastimega?_t=ZS-8wXx5ZAREJM&_r=1"><i class="fab fa-tiktok"></i></a>
-                                        <!-- <a class="btn p-0 text-white me-3" href="#"><i class="fab fa-twitter"></i></a> -->
-                                        <a class="btn p-0 text-white me-3" target="_blank" href="https://www.instagram.com/plastimega.cuapiaxtla2002/"><i class="fab fa-instagram"></i></a>
-                                        <!-- <a class="btn p-0 text-white me-0" href="#"><i class="fab fa-linkedin-in"></i></a> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nav-bar px-0 py-lg-0 d-print-none d-print-nones" style="height: 80px;">
-                        <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
-                            <a href="#" class="navbar-brand-2">
-                                <h1 class="text-primary mb-0">
-                                    <img src="img/plastimega/logo.png" style="width: 140px;" alt="">
-                                </h1>
-                                <!-- <img src="img/logo.png" alt="Logo"> -->
-                            </a> 
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                                <span class="fa fa-bars"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarCollapse">
-                                <div class="navbar-nav mx-0 mx-lg-auto">
-                                    <a href="index.html" class="nav-item nav-link text-dark active">Inicio</a>
-                                    <a href="about.html" class="nav-item nav-link text-dark">Nosotros</a>
-                                    <a href="proveedores.html" class="nav-item nav-link text-dark">Proveedores</a>
-                                    <a href="contacto.html" class="nav-item nav-link text-dark ">Contacto</a>
-                                    <!-- <a href="course.html" class="nav-item nav-link text-dark">Courses</a>
-                                    <a href="blog.html" class="nav-item nav-link text-dark">Blogs</a>
-                                    <div class="nav-item dropdown">
-                                        <a href="#" class="nav-link text-dark" data-bs-toggle="dropdown">
-                                            <span class="dropdown-toggle">Pages</span>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a href="feature.html" class="dropdown-item  text-dark">Our Features</a>
-                                            <a href="team.html" class="dropdown-item text-dark">Our team</a>
-                                            <a href="testimonial.html" class="dropdown-item text-dark">Testimonial</a>
-                                            <a href="404.html" class="dropdown-item text-dark">404 Page</a>
-                                        </div>
-                                    </div> -->
-                                    <div class="nav-btn ps-3 px-4">
-                                        <button  class="btn btn-sm mx-4" style="background-color: rgb(0, 14, 53); color: white;" id="save_pdf">
-                                            <i class="fa fa-file-pdf mx-1"></i>
-                                            Generar Catálogo PDF
-                                        </button>
-                                        <a href="#" class="btn bg-white text-dark border-white py-2 px-4 ms-0 ms-lg-3"> <span>Catálogo</span></a>
-                                    </div>
-                                    <div class="nav-shaps-1"></div>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
             </div>
-        </div>
+        </nav>
         <!-- Navbar & Hero End -->
 
 
-        <!-- Header Start -->
-        <!-- <div class="container-fluid bg-breadcrumb text-center p-2">
-                <img src="img/plastimega/logo.png" class="img-fluid d-none d-print-block" alt="" style="width: 140px;">
-                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Catálogo</h4>   
-        </div> -->
-        <!-- Header End -->
-
+        <br><br>
 
 
         <!-- catalogo Start -->
-        <div class="container-fluid " id="contenedor_print">
+        <div class="container-fluid mt-5" id="contenedor_print">
             <div class="row">
                 <div class="container-fluid bg-breadcrumb text-center p-2">
-                        <img src="img/plastimega/logo.png" class="img-fluid d-none d-print-block" alt="" style="width: 140px;">
+
                         <h4 class="text-white display-4 mb-4 wow" data-wow-delay="0.1s">Catálogo</h4>   
                 </div>
             </div>
