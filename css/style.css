@@ -2,6 +2,34 @@
 
 
 
+.nav-pills .nav-link.active {
+    background-color: #0c1844;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to top, rgba(32, 71, 129, 0.8), rgba(6, 68, 60, 0));
+    z-index: 0;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-caption {
+    z-index: 3; /* Asegura que quede arriba del gradiente */
+    position: absolute;
+}
+
+
+
 .lexend{
   font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
@@ -371,19 +399,18 @@ a:hover {
 .btn.btn-dark {
     color: var(--bs-white);
     border: none;
-    transform: skew(18deg);
     transition: 0.5s;
 }
 
 .btn.btn-dark span,
 .btn.btn-dark i {
     display: inline-block;
-    transform: skew(-18deg);
+
 }
 
 .btn.btn-dark:hover {
-    color: var(--bs-dark);
-    background: var(--bs-white);
+    color: var(--bs-light);
+    background: var(--bs-dark);
 }
 
 /*** Navbar Start ***/
@@ -826,7 +853,7 @@ a:hover {
     background: var(--bs-dark);
     color: var(--bs-white);
 }
-
+/* 
 .header-carousel .header-carousel-item .carousel-caption {
     position: absolute;
     width: 100%;
@@ -837,9 +864,9 @@ a:hover {
     display: flex;
     align-items: center;
     z-index: 9;
-}
+} */
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     .header-carousel .header-carousel-item .carousel-caption {
         padding-top: 45px;
     }
@@ -848,7 +875,7 @@ a:hover {
     .header-carousel .header-carousel-item {
         height: 700px;
     }
-}
+} */
 /*** Carousel Hero Header End ***/
 
 
@@ -903,13 +930,7 @@ a:hover {
     z-index: 10;
 }
 
-.about .tab-class .nav .nav-item a {
-    position: relative;
-    transform: skew(18deg);
-    text-align: center;
-    background: var(--bs-white);
-    color: var(--bs-dark);
-}
+
 
 .about .tab-class .nav .nav-item a span {
     transform: skew(-18deg);
