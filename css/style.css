@@ -580,7 +580,7 @@ a:hover {
 .navbar-light .navbar-nav .nav-item.active,
 .navbar-light .navbar-nav .nav-item:hover .nav-link,
 .navbar-light .navbar-nav .nav-item.active .nav-link {
-    color: var(--bs-primary);
+    color: var(--bs-dark);
 }
 
 @media (max-width: 991px) {
