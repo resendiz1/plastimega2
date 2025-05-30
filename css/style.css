@@ -6,6 +6,118 @@
   font-style: normal;
 }
 
+/* css del menu desplegable */
+
+@media (max-width: 1350px) {
+    #inicio {
+        display: none;
+    }
+    #menu-sandwich {
+        display: block;
+    }
+}
+
+@media (min-width: 1351px) {
+    #menu-sandwich {
+        display: none;
+    }
+}
+
+    .menu-sandwich-container {
+        background-color: rgb(12, 24, 68);
+        color: white;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        font-family: 'Lexend', sans-serif;
+    }
+
+    .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .logo-img {
+        max-height: 50px;
+    }
+
+    .menu-toggle {
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+
+    .menu-links a {
+        color: white;
+        text-decoration: none;
+        padding-left: 90px;
+        display: block;
+        text-align: left;
+    }
+
+    .menu-links button {
+        color: white;
+        text-decoration: none;
+        padding-left: 90px;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        padding: 8px 0;
+        text-align: left;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        flex-direction: column;
+        padding-left: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-content a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 0;
+        font-size: 14px;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: flex;
+    }
+
+    /* Estilo activo del menú */
+    .menu-links.active {
+        display: flex;
+    }
+
+/* css del menu desplegable */
+
+
+
+
+
 /* Las nav.pills de la vision, mision etc */
 .nav-pills .nav-link.active {
     background-color: #0c1844;
@@ -131,8 +243,8 @@ a {
 }
 
 a:hover {
-    transform: scale(1.1); /* Aumenta el tamaño en 10% */
-    transition: 0.5s;
+    transform: scale(1.05); /* Aumenta el tamaño en 10% */
+    transition: 0.2s;
 }
 .text-justify{
     text-align: justify;
@@ -1160,13 +1272,17 @@ a:hover {
     margin: 0 15px;
     background: rgba(241, 241, 241, 0.911);
     transition: 0.5s;
+    color: #0c1844;    
 }
 
 .courses-item:hover .courses-item-inner {
     background: none;
+      color: white;
 }
 
-.courses-item .courses-item-inner:hover {
+.courses-item .courses-item-inner :hover {
+
+    color: white;
 
 }
 

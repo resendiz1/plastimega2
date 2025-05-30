@@ -339,3 +339,53 @@ document.addEventListener("keyup", function(e) {
     // Ejecutar cuando se hace scroll
     window.addEventListener('scroll', actualizarNavbar);
     window.addEventListener('touchmove', actualizarNavbar);
+
+
+
+
+    {
+
+        
+
+    function toggleMenu() {
+        document.getElementById('menuLinks').classList.toggle('active');
+    }
+
+    // Cierre automático de submenú al volver a hacer clic o hacer clic fuera
+    document.addEventListener('click', function (e) {
+        const isDropdownButton = e.target.classList.contains('dropdown-btn');
+        const openDropdown = document.querySelector('.dropdown.open');
+
+        if (isDropdownButton) {
+            const dropdown = e.target.parentElement;
+
+            if (dropdown.classList.contains('open')) {
+                dropdown.classList.remove('open');
+            } else {
+                if (openDropdown) {
+                    openDropdown.classList.remove('open');
+                }
+                dropdown.classList.add('open');
+            }
+
+            e.stopPropagation();
+        } else {
+            if (openDropdown) {
+                openDropdown.classList.remove('open');
+            }
+        }
+    });
+
+    // Cierre automático del menú hamburguesa al hacer clic en un enlace
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuLinks = document.getElementById('menuLinks');
+        const links = menuLinks.querySelectorAll('a');
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menuLinks.classList.remove('active');
+            });
+        });
+    });
+
+    }

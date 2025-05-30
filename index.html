@@ -44,9 +44,9 @@
         <nav class="container-fluid custom-navbar fixed-top lexend " id="inicio">
             <div class="row">
                 <div class="col-12 col-sm-10 col-md-4 col-lg-2">
-                    <img src="img/plastimega/logo.png" class="img-fluid p-3" alt="">
+                    <img src="img/plastimega/logo.png" class="img-fluid w-75 py-3" alt="">
                 </div>
-                <div class="col-12 col-sm-10 col-md-4 col-lg-3 d-flex align-items-center  justify-content-center mt-1">
+                <div class="col-1 col-sm-1 col-md-1 col-lg-3 d-flex align-items-center  justify-content-center mt-1">
                 </div>
 
                 <div class="col-12 col-sm-10 col-md-4 col-lg-auto d-flex align-items-center  justify-content-center mt-1">
@@ -89,6 +89,41 @@
             </div>
         </nav>
         <!-- Navbar & Hero End -->
+
+
+        <!-- MENU DESPLEGABLE PARA MOVILES Y TABLETAS -->
+        <!-- Menú Hamburguesa Desplegable -->
+        <nav class="menu-sandwich-container" id="menu-sandwich">
+            <div class="menu-header">
+                <img src="img/plastimega/logo.png" class="logo-img" alt="">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+            <div class="menu-links text-start" id="menuLinks">
+                <a href="#" class="btn ">Inicio</a>
+                <div class="dropdown">
+                    <button class=" btn dropdown-btn">Nosotros</button>
+                    <div class="dropdown-content px-5">
+                        <a href="#sucursales">Sucursales</a>
+                        <a href="#compromiso">Compromiso</a>
+                        <a href="#politica">Política de calidad</a>
+                        <a href="#ubicacion">Ubicación</a>
+                    </div>
+                </div>
+                <a href="#contacto" class="btn ">Contacto</a>
+                <a href="#proveedores" class="btn ">Proveedores</a>
+                <a href="proveedores.html" class="btn ">Seguridad Industrial</a>
+                <a href="catalogo.html" class="btn ">
+                    <i class="fa fa-list mx-2"></i> Catálogo
+                </a>
+            </div>
+        </nav>
+
+        <!-- MENU DESPLEGABLE PARA MOVILES Y TABLETAS -->
+
+
+
+
+
 
         <!-- Modal de contacto Start -->
         <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -423,11 +458,11 @@
         <br id="compromiso"><br>
 
                 <!-- Courses Start -->
-        <div class="container-fluid courses overflow-hidden py-5 mt-5">
+        <div class="container-fluid  overflow-hidden py-5 mt-5">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h1 class="display-4 text-white mb-4">Comprometidos con la excelencia.</h1>
-                    <p class="text-white mb-0 h3 text-justify">
+                    <h1 class="display-4  mb-4">Comprometidos con la excelencia.</h1>
+                    <p class=" mb-0 h3 text-justify">
                         En Plastimega trabajamos bajo un sistema de gestión de calidad certificado con la norma ISO 9001:2015, lo que garantiza que nuestros procesos cumplen con los más altos estándares internacionales.
                     </p>
                     <p class="h4 text-white my-4">ESTA CERTIFICACIÓN RESPALDA NUESTRO COMPROMISO CON: </p>
@@ -521,7 +556,7 @@
                     <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                         <div class="mb-4">
                             <h1 class="display-4 mb-4">Ponte en contacto con nosotros.</h1>
-                            <p class="mb-4">Estamos disponibles para resolver tus dudas, atender tus solicitudes o brindarte más información sobre nuestros productos. Completa el formulario o usa cualquiera de nuestros medios de contacto.
+                            <p class="mb-4 text-dark">Estamos disponibles para resolver tus dudas, atender tus solicitudes o brindarte más información sobre nuestros productos. Completa el formulario o usa cualquiera de nuestros medios de contacto.
                             </p>
                             <div class="row g-4">
                                 <div class="col-lg-6">
@@ -1079,8 +1114,6 @@
                     <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                         <div class="mb-4">
                             <h1 class="display-4 mb-4">Ponte en contacto con nosotros.</h1>
-                            <p class="mb-4">Estamos disponibles para resolver tus dudas, atender tus solicitudes o brindarte más información sobre nuestros productos. Completa el formulario o usa cualquiera de nuestros medios de contacto.
-                            </p>
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <a href="https://maps.app.goo.gl/3AquHkZNfy34Tn3s8" target="_blank" class="text-dark">
