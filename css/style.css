@@ -25,9 +25,14 @@ html, body {
 
 
 
- /* css del modal */
-
-
+ /* PARA QUE EL TEXTO DEL CAROUSEL PRINCIPAL SE */
+@media (max-width: 768px) {
+  .carousel-caption h2,
+  .carousel-caption h3 {
+    margin-bottom: 1rem;
+    transform: translateY(-50px); /* Sube los textos */
+  }
+}
 
 
 
