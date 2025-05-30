@@ -187,6 +187,9 @@ document.addEventListener("keyup", function(e) {
 
 
 
+// ENVIO DE CORREOS ELECTRONICOS
+
+
 {  
 
 
@@ -200,17 +203,17 @@ document.addEventListener("keyup", function(e) {
 
 
   //validacion de los datos del formulario
-  if(document.getElementById('contacto_clientes')){
+  if(document.getElementById('contacto_clientes1')){
 
   
-   let $nombre = document.getElementById('nombre_cliente');
-   let $correo = document.getElementById('email_cliente');
-   let $telefono = document.getElementById('telefono_cliente');
-   let $asunto = document.getElementById('asunto_cliente');
-   let $mensaje = document.getElementById('mensaje_cliente');
-   let $error = document.getElementById('errores');
-   let $success = document.getElementById('success');
-   let $botton = document.getElementById('contacto_clientes');
+   let $nombre = document.getElementById('nombre_cliente1');
+   let $correo = document.getElementById('email_cliente1');
+   let $telefono = document.getElementById('telefono_cliente1');
+   let $asunto = document.getElementById('asunto_cliente1');
+   let $mensaje = document.getElementById('mensaje_cliente1');
+   let $error = document.getElementById('error1');
+   let $success = document.getElementById('success1');
+   let $botton = document.getElementById('contacto_clientes1');
 
 
 
@@ -273,9 +276,167 @@ document.addEventListener("keyup", function(e) {
 })
 }
 
+
+
+
+  if(document.getElementById('contacto_clientes2')){
+
+  
+   let $nombre = document.getElementById('nombre_cliente2');
+   let $correo = document.getElementById('email_cliente2');
+   let $telefono = document.getElementById('telefono_cliente2');
+   let $asunto = document.getElementById('asunto_cliente2');
+   let $mensaje = document.getElementById('mensaje_cliente2');
+   let $error = document.getElementById('error2');
+   let $success = document.getElementById('success2');
+   let $botton = document.getElementById('contacto_clientes2');
+
+
+
+    $botton.addEventListener('click', ()=>{
+
+
+
+    $botton.innerHTML = '<img src="img/loader.webp" style="width: 30px;" alt="">';
+
+    console.log($nombre.value)
+
+    if($nombre.value === "" || $correo.value === "" || $telefono.value === "" ||  $asunto.value === "" || $mensaje.value === ""){
+    
+        $error.classList.remove('d-none');
+        setTimeout(()=>{
+        $error.classList.add('d-none');
+        $botton.innerHTML = 'Enviar Mensaje';
+        }, 3000)
+    
+    }
+    else{
+
+
+        // alert($nombre.value + $correo.value + $telefono.value + $asunto.value + $mensaje.value)
+        emailjs.send("service_9m5rcfq", 'template_jxef3lh', {
+            
+            nombre_cliente: $nombre.value,
+            correo_cliente: $correo.value,
+            telefono_cliente: $telefono.value,
+            asunto_cliente: $asunto.value,
+            mensaje_cliente: $mensaje.value,
+
+        }).then(function(response){
+
+            $nombre.value = "";
+            $correo.value = "";
+            $telefono.value = "";
+            $asunto.value = "";
+            $mensaje.value = "";
+
+            $success.classList.remove('d-none');
+            setTimeout(()=>{
+                $success.classList.add('d-none');
+            }, 5000);
+
+            $botton.innerHTML = 'Enviar Mensaje';
+            console.log(response.status);
+
+            
+        }, function(error){
+
+            alert('error enviar')
+            console.log("error al enviar" + error)
+
+        })
+
+
+    }
+
+})
 }
 
 
+
+  if(document.getElementById('contacto_clientes3')){
+
+  
+   let $nombre = document.getElementById('nombre_cliente3');
+   let $correo = document.getElementById('email_cliente3');
+   let $telefono = document.getElementById('telefono_cliente3');
+   let $asunto = document.getElementById('asunto_cliente3');
+   let $mensaje = document.getElementById('mensaje_cliente3');
+   let $error = document.getElementById('error3');
+   let $success = document.getElementById('success3');
+   let $botton = document.getElementById('contacto_clientes3');
+
+
+
+    $botton.addEventListener('click', ()=>{
+
+
+
+    $botton.innerHTML = '<img src="img/loader.webp" style="width: 30px;" alt="">';
+
+    console.log($nombre.value)
+
+    if($nombre.value === "" || $correo.value === "" || $telefono.value === "" ||  $asunto.value === "" || $mensaje.value === ""){
+    
+        $error.classList.remove('d-none');
+        setTimeout(()=>{
+        $error.classList.add('d-none');
+        $botton.innerHTML = 'Enviar Mensaje';
+        }, 3000)
+    
+    }
+    else{
+
+
+        // alert($nombre.value + $correo.value + $telefono.value + $asunto.value + $mensaje.value)
+        emailjs.send("service_9m5rcfq", 'template_jxef3lh', {
+            
+            nombre_cliente: $nombre.value,
+            correo_cliente: $correo.value,
+            telefono_cliente: $telefono.value,
+            asunto_cliente: $asunto.value,
+            mensaje_cliente: $mensaje.value,
+
+        }).then(function(response){
+
+            $nombre.value = "";
+            $correo.value = "";
+            $telefono.value = "";
+            $asunto.value = "";
+            $mensaje.value = "";
+
+            $success.classList.remove('d-none');
+            setTimeout(()=>{
+                $success.classList.add('d-none');
+            }, 5000);
+
+            $botton.innerHTML = 'Enviar Mensaje';
+            console.log(response.status);
+
+            
+        }, function(error){
+
+            alert('error enviar')
+            console.log("error al enviar" + error)
+
+        })
+
+
+    }
+
+})
+}
+
+
+
+//
+
+
+
+
+}
+
+// ENVIO DE CORREOS ELECTRONICOS
 
 
 

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .lexend{
   font-family: "Lexend", sans-serif;
@@ -6,9 +7,35 @@
   font-style: normal;
 }
 
+
+.arvo-regular {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: auto;
+}
+
+
+
+
+ /* css del modal */
+
+
+
+
+
+
+
 /* css del menu desplegable */
 
-@media (max-width: 1350px) {
+@media (max-width: 1100px) {
     #inicio {
         display: none;
     }
@@ -17,7 +44,7 @@
     }
 }
 
-@media (min-width: 1351px) {
+@media (min-width: 1101px) {
     #menu-sandwich {
         display: none;
     }
@@ -118,6 +145,9 @@
 
 
 
+
+
+
 /* Las nav.pills de la vision, mision etc */
 .nav-pills .nav-link.active {
     background-color: #0c1844;
@@ -127,6 +157,11 @@
 }
 
 /* Las nav.pills de la vision, mision etc */
+
+
+
+
+
 
 
 /* el gradient, tipo de letra de el carousel del inicio */
@@ -149,11 +184,11 @@
     position: absolute;
 }
 
-
-
-
-
 /* el gradient, tipo de letra de el carousel del inicio */
+
+
+
+
 
 
 /* Enlace con subrayado animado */
@@ -180,13 +215,7 @@
 .nav-link-efecto:hover::after {
   width: 100%;
 }
-
-
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+/* Enlace con subrayado animado */
 
 .transparencia{
     background-color: rgba(14, 32, 96, 0.2); /* equivalente a --bs-dark con 50% de opacidad */
@@ -478,14 +507,13 @@ a:hover {
     color: var(--bs-white);
     background-color: var(--bs-dark);
     border: none;
-    transform: skew(18deg);
     transition: 0.5s;
 }
 
 .btn.btn-primary span,
 .btn.btn-primary i {
     display: inline-block;
-    transform: skew(-18deg);
+
 }
 
 .btn.btn-primary:hover {
@@ -1078,7 +1106,7 @@ a:hover {
 
 .politica {
     position: relative;
-    background: linear-gradient(rgba(12, 24, 68, 0.95), rgba(15, 27, 71, 0.95)), url(../img/utilidades/IMG_4424.jpg);
+    background: linear-gradient(rgba(12, 24, 68, 0.5), rgba(15, 27, 71, 0.5)), url(../img/utilidades/IMG_4424.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
