@@ -96,12 +96,6 @@
                         Catálogo
                     </a>
                 </div>
-                <div class="col-12 col-sm-10 col-md-4 col-lg-auto d-flex align-items-center  justify-content-center mt-1">
-                    <button class="btn btn-sm btn-dark mx-4 " id="save_pdf">
-                        <i class="fa fa-download  mx-2"></i>
-                        Descargar PDF
-                    </button>
-                </div>
 
             </div>
         </nav>
@@ -132,10 +126,6 @@
                 <a href="catalogo.html" class="btn ">
                      Catálogo
                 </a>
-                <button class="btn btn-sm btn-dark" id="save_pdf">
-                    Descargar PDF
-                    <i class="fa fa-download  mx-2"></i>
-                </button>
             </div>
         </nav>
 
@@ -149,8 +139,11 @@
         <div class="container-fluid mt-2" id="contenedor_print">
             <div class="row">
                 <div class="container-fluid bg-breadcrumb text-center p-2">
-
-                        <h4 class="text-white display-4 mb-4 wow" data-wow-delay="0.1s">Catálogo</h4>   
+                    <h4 class="text-white display-4 mb-4 wow" data-wow-delay="0.1s">Catálogo</h4>   
+                    <button class="btn btn-sm btn-dark  " id="save_pdf">
+                        <i class="fa fa-download  my-2"></i>
+                        Descargar PDF
+                    </button>
                 </div>
             </div>
 
@@ -1375,6 +1368,7 @@
 
            
             save_pdf.addEventListener('click', () => {
+                alert('dsfds')
            
              save_pdf.innerHTML = "<img src='img/loader.gif' class='img-fluid' style='width:20px' >";
            
