@@ -558,17 +558,20 @@ document.addEventListener("keyup", function(e) {
 {
 
 const imageMaps = {
+
   silla_paris: {
-    white: '/img/catalogo/silla_paris_blanca.jpg',
-    green: '/img/catalogo/silla_paris_verde.jpg',
-    blue: '/img/catalogo/silla_paris_azul.jpg'
+    white: 'img/catalogo/silla_paris_blanca.jpg',
+    green: 'img/catalogo/caja_miguel_negrete_5.jpg',
+    blue: 'img/catalogo/silla_paris_azul.jpg'
   },
+
   silla_milan: {
     red: 'img/catalogo/silla_milan.jpg',
     green: 'img/catalogo/silla_milan.jpg',
     yellow: 'img/catalogo/silla_milan.jpg',
     blue: 'img/catalogo/silla_milan.jpg'
   },
+
  caja_miguel_negrete_5:{
 
     red: 'img/catalogo/caja_miguel_negrete_5_roja_10kg.jpg',
