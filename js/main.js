@@ -559,9 +559,9 @@ document.addEventListener("keyup", function(e) {
 
 const imageMaps = {
   silla_paris: {
-    white: 'img/catalogo/silla_paris_blanca.jpg',
-    green: 'img/catalogo/silla_paris_verde.jpg',
-    blue: 'img/catalogo/silla_paris_azul.jpg'
+    white: '/img/catalogo/silla_paris_blanca.jpg',
+    green: '/img/catalogo/silla_paris_verde.jpg',
+    blue: '/img/catalogo/silla_paris_azul.jpg'
   },
   silla_milan: {
     red: 'img/catalogo/silla_milan.jpg',
