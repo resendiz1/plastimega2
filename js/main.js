@@ -561,7 +561,6 @@ const imageMaps = {
 
   silla_paris: {
     white: 'img/catalogo/silla_paris_blanca.jpg',
-    green: 'img/catalogo/caja_miguel_negrete_5.jpg',
     blue: 'img/catalogo/silla_paris_azul.jpg'
   },
 
