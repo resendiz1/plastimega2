@@ -550,3 +550,55 @@ document.addEventListener("keyup", function(e) {
     });
 
     }
+
+
+
+
+
+{
+
+const imageMaps = {
+  silla_paris: {
+    white: '../img/catalogo/silla_paris_blanca.jpg',
+    green: '../img/catalogo/silla_paris_verde.jpg',
+    blue: '../img/catalogo/silla_paris_azul.jpg'
+  },
+  silla_milan: {
+    red: 'img/catalogo/silla_milan.jpg',
+    green: '../img/catalogo/silla_milan.jpg',
+    yellow: 'img/catalogo/silla_milan.jpg',
+    blue: 'img/catalogo/silla_milan.jpg'
+  },
+ caja_miguel_negrete_5:{
+
+    red: 'img/catalogo/caja_miguel_negrete_5_roja_10kg.jpg',
+    purple: '../img/catalogo/caja_miguel_negrete_5_morada.jpg',
+    dark: 'img/catalogo/caja_miguel_negrete_5_10kg.jpg',
+
+
+
+  }
+  // ... y así hasta producto20
+};
+
+// Asignar eventos
+document.querySelectorAll('.color-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const product = button.getAttribute('data-product');
+    const color = button.getAttribute('data-color');
+
+    // Cambiar imagen
+    const imageElement = document.querySelector(`[data-product-image="${product}"]`);
+    if (imageElement && imageMaps[product] && imageMaps[product][color]) {
+      imageElement.src = imageMaps[product][color];
+    }
+
+    // Actualizar botones activos solo en este producto
+    document.querySelectorAll(`.color-btn[data-product="${product}"]`)
+      .forEach(btn => btn.classList.remove('active'));
+    
+    button.classList.add('active');
+  });
+});
+    
+}
