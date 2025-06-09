@@ -212,7 +212,11 @@ document.addEventListener("keyup", function(e) {
    let $asunto = document.getElementById('asunto_cliente1');
    let $mensaje = document.getElementById('mensaje_cliente1');
    let $error = document.getElementById('error1');
+   let $formulario = document.getElementById('formulario1');
    let $success = document.getElementById('success1');
+   let $email_send1 = document.getElementById('email_send1');
+   let $email_send2 = document.getElementById('email_send2');
+
    let $botton = document.getElementById('contacto_clientes1');
 
 
@@ -245,6 +249,9 @@ document.addEventListener("keyup", function(e) {
             telefono_cliente: $telefono.value,
             asunto_cliente: $asunto.value,
             mensaje_cliente: $mensaje.value,
+            email_send1: $email_send1.value,
+            email_send2: $email_send2.value,
+            formulario:$formulario.value
 
         }).then(function(response){
 
@@ -364,6 +371,9 @@ document.addEventListener("keyup", function(e) {
    let $mensaje = document.getElementById('mensaje_cliente3');
    let $error = document.getElementById('error3');
    let $success = document.getElementById('success3');
+   let $email_send1 = document.getElementById('email_send1');
+   let $email_send2 = document.getElementById('email_send2');
+   let $formulario = document.getElementById('formulario');
    let $botton = document.getElementById('contacto_clientes3');
 
 
@@ -396,6 +406,87 @@ document.addEventListener("keyup", function(e) {
             telefono_cliente: $telefono.value,
             asunto_cliente: $asunto.value,
             mensaje_cliente: $mensaje.value,
+            email_send1: $email_send1.value,
+            formulario: $formulario.value,
+            email_send2: $email_send2.value,
+
+        }).then(function(response){
+
+            $nombre.value = "";
+            $correo.value = "";
+            $telefono.value = "";
+            $asunto.value = "";
+            $mensaje.value = "";
+
+            $success.classList.remove('d-none');
+            setTimeout(()=>{
+                $success.classList.add('d-none');
+            }, 5000);
+
+            $botton.innerHTML = 'Enviar Mensaje';
+            console.log(response.status);
+
+            
+        }, function(error){
+
+            alert('error enviar')
+            console.log("error al enviar" + error)
+
+        })
+
+
+    }
+
+})
+}
+
+
+  if(document.getElementById('contacto_clientes4')){
+
+  
+   let $nombre = document.getElementById('nombre_clientes4');
+   let $correo = document.getElementById('email_clientes4');
+   let $telefono = document.getElementById('telefono_clientes4');
+   let $asunto = document.getElementById('asunto_clientes4');
+   let $mensaje = document.getElementById('mensaje_clientes4');
+   let $formulario = document.getElementById('formulario4');
+   let $email_send1 = document.getElementById('email_send1');
+   let $error = document.getElementById('error4');
+   let $success = document.getElementById('success');
+   let $botton = document.getElementById('contacto_clientes4');
+
+
+
+    $botton.addEventListener('click', ()=>{
+
+
+
+    $botton.innerHTML = '<img src="img/loader.webp" style="width: 30px;" alt="">';
+
+    console.log($nombre.value)
+
+    if($nombre.value === "" || $correo.value === "" || $telefono.value === "" ||  $asunto.value === "" || $mensaje.value === ""){
+    
+        $error.classList.remove('d-none');
+        setTimeout(()=>{
+        $error.classList.add('d-none');
+        $botton.innerHTML = 'Enviar Mensaje';
+        }, 3000)
+    
+    }
+    else{
+
+
+        // alert($nombre.value + $correo.value + $telefono.value + $asunto.value + $mensaje.value)
+        emailjs.send("service_9m5rcfq", 'template_jxef3lh', {
+            
+            nombre_cliente: $nombre.value,
+            correo_cliente: $correo.value,
+            telefono_cliente: $telefono.value,
+            asunto_cliente: $asunto.value,
+            email_send1: $email_send1.value,
+            mensaje_cliente: $mensaje.value,
+            formulario: $formulario.value
 
         }).then(function(response){
 

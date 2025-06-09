@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="col-12 col-sm-10 col-md-4 col-lg-auto d-flex align-items-center  justify-content-center mt-1">
-                    <a onclick="alert('Pendiente')" class="text-white nav-link-efecto">Seguridad Industrial</a>
+                    <a onclick="alert('A espera de las fotos')" class="text-white nav-link-efecto">Seguridad Industrial</a>
                 </div>
 
                 <div class="col-12 col-sm-10 col-md-4 col-lg-auto d-flex align-items-center  justify-content-center mt-1">
@@ -127,7 +127,7 @@
                 <a href="contacto.html" class="btn ">Contacto</a>
                 <a href="proveedores.html" class="btn ">Proveedores</a>
                 <a href="capital_humano.html" class="btn ">Capital Humano</a>
-                <a onclick="alert('Pendiente')" class="btn ">Seguridad Industrial</a>
+                <a onclick="alert('A espera de las fotos')" class="btn ">Seguridad Industrial</a>
                 <a href="catalogo.html" class="btn ">
                      Catálogo
                 </a>
@@ -183,13 +183,13 @@
                     <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                         <div class="mb-4">
                             <h1 class="display-4 mb-4">Contactatanos.</h1>
-                            <p class="mb-4">En Plastimega, siempre estamos en la búsqueda de personas talentosas, comprometidas y con ganas de crecer profesionalmente. Si estás interesado en formar parte de un equipo dinámico, colaborativo y en constante evolución, este es el lugar indicado para comenzar.
+                            <p class="mb-4 text-dark">En Plastimega, siempre estamos en la búsqueda de personas talentosas, comprometidas y con ganas de crecer profesionalmente. Si estás interesado en formar parte de un equipo dinámico, colaborativo y en constante evolución, este es el lugar indicado para comenzar.
                             </p>
 
-                            <p>
+                            <p class="text-dark">
                                 Completá el formulario con tus datos personales, cuentanos brevemente sobre tu experiencia, tus intereses profesionales.
                             </p>
-                            <p>
+                            <p class="text-dark">
                                 Gracias por tu interés en ser parte de nuestra historia. ¡Estamos ansiosos por conocerte!
                             </p>
                                 
@@ -272,7 +272,7 @@
                                     </div>
                                     <div class="col-lg-12 col-xl-12">
                                         <div class="form-floating form-section-col">
-                                            <input type="text" id="nombre_cliente" class="form-control border-0"  placeholder="Nombre completo">
+                                            <input type="text" id="nombre_clientes4" class="form-control border-0"  placeholder="Nombre completo">
                                             <label for="name">Nombre completo</label>
                                             <div class="alert alert-primary p-1 d-none">
                                                 <i class="fas fa-info-circle"></i>
@@ -282,7 +282,7 @@
                                     </div>
                                     <div class="col-lg-12 col-xl-12">
                                         <div class="form-floating form-section-col">
-                                            <input type="email" class="form-control border-0" id="email_cliente" placeholder="Correo Electrónico">
+                                            <input type="email" class="form-control border-0" id="email_clientes4" placeholder="Correo Electrónico">
                                             <label for="email">Correo Electrónico</label>
                                             <div class="alert alert-primary p-1 d-none">
                                                 <i class="fas fa-info-circle"></i>
@@ -292,7 +292,7 @@
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating form-section-col">
-                                            <input type="phone" class="form-control border-0" id="telefono_cliente" placeholder="Número de Teléfono">
+                                            <input type="phone" class="form-control border-0" id="telefono_clientes4" placeholder="Número de Teléfono">
                                             <label for="phone">Número de Teléfono</label>
                                             <div class="alert alert-primary p-1 d-none">
                                                 <i class="fas fa-info-circle"></i>
@@ -302,7 +302,7 @@
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating form-section-col">
-                                            <input type="text" class="form-control border-0" id="asunto_cliente" placeholder="Subject">
+                                            <input type="text" class="form-control border-0" id="asunto_clientes4" placeholder="Subject">
                                             <label for="subject">Asunto</label>
                                             <div class="alert alert-primary p-1 d-none">
                                                 <i class="fas fa-info-circle"></i>
@@ -312,7 +312,11 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating form-section-col" >
-                                            <textarea class="form-control w-100 h-75" placeholder="Dejanos tu mensaje" id="mensaje_cliente" ></textarea>
+                                            <textarea class="form-control w-100 h-75" placeholder="Dejanos tu mensaje" id="mensaje_clientes4" ></textarea>
+
+                                            <input type="hidden" id="formulario4" value="Solicitud de Empleo">
+                                            <input type="hidden" id="email_send1" value="rperez@plastimega.com.mx">
+
                                             <label for="message">Dejanos tu mensaje y nosotros nos contactaremos.</label>
                                             <div class="alert alert-primary p-1 d-none">
                                                 <i class="fas fa-info-circle"></i>
@@ -322,7 +326,7 @@
                                     </div>
                                     <div class="col-12 mt-5">
                                         <div class="form-section-col">
-                                            <button class="btn-white w-100 py-3 px-5" id="contacto_cliente">Enviar Mensaje</button>
+                                            <button class="btn-white w-100 py-3 px-5" id="contacto_clientes4">Enviar Mensaje</button>
                                         </div>
                                     </div>
                                 </div>
@@ -404,11 +408,11 @@
                                         <div>
                                             <h4 class="text-white ">Teléfonos</h4>
                                             <a href="tel:+522494260904" class="mb-0">
-                                                249 426 09 04
+                                                (+52 1)249 426 09 04
                                             </a>
                                             <br>
                                             <a href="tel:+522494260747" class="mb-0">
-                                                249 426 07 47
+                                                (+52 1)249 426 07 47
                                             </a>
                                         </div>
                                     </div>
@@ -427,7 +431,7 @@
                                         </div>
                                     </a>
 
-                                    <div class="d-flex mt-5">
+                                    <!-- <div class="d-flex mt-5">
                                         <i class="fa fa-phone-alt text-white me-2"></i>
                                         <div>
                                             <h4 class="text-white mb-2">Teléfonos</h4>
@@ -435,7 +439,7 @@
                                                 222 678 44 57
                                             </a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
 
 
@@ -445,7 +449,6 @@
                                         <i class="fas fa-envelope text-white me-2"></i>
                                         <div>
                                             <h5 class="text-white mb-2">Correos Electrónicos</h5>
-                                            <a href="mailto:kgonzalez@plastimega.com.mx">kgonzalez@plastimega.com.mx</a> <br>
                                             <a href="mailto:rmoral@plastimega.com.mx">rmoral@plastimega.com.mx</a> <br>
                                             <a href="mailto:mperez@plastimega.com.mx">mperez@plastimega.com.mx</a> <br>
                                             <a href="mailto:ventaspuebla@plastimega.com.mx">ventaspuebla@plastimega.com.mx</a> <br>
