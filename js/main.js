@@ -206,14 +206,14 @@ document.addEventListener("keyup", function(e) {
   if(document.getElementById('contacto_clientes1')){
 
   
-   let $nombre = document.getElementById('nombre_cliente1');
-   let $correo = document.getElementById('email_cliente1');
-   let $telefono = document.getElementById('telefono_cliente1');
-   let $asunto = document.getElementById('asunto_cliente1');
-   let $mensaje = document.getElementById('mensaje_cliente1');
-   let $error = document.getElementById('error1');
+   let $nombre = document.getElementById('nombre_clientes1');
+   let $correo = document.getElementById('email_clientes1');
+   let $telefono = document.getElementById('telefono_clientes1');
+   let $asunto = document.getElementById('asunto_clientes1');
+   let $mensaje = document.getElementById('mensaje_clientes1');
+   let $error = document.getElementById('error');
    let $formulario = document.getElementById('formulario1');
-   let $success = document.getElementById('success1');
+   let $success = document.getElementById('success');
    let $email_send1 = document.getElementById('email_send1');
    let $email_send2 = document.getElementById('email_send2');
 
@@ -227,7 +227,6 @@ document.addEventListener("keyup", function(e) {
 
     $botton.innerHTML = '<img src="img/loader.webp" style="width: 30px;" alt="">';
 
-    console.log($nombre.value)
 
     if($nombre.value === "" || $correo.value === "" || $telefono.value === "" ||  $asunto.value === "" || $mensaje.value === ""){
     
