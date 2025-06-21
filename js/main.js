@@ -212,6 +212,7 @@ document.addEventListener("keyup", function(e) {
    let $success = document.getElementById('success');
    let $email_send1 = document.getElementById('email_send1');
    let $email_send2 = document.getElementById('email_send2');
+   let $email_send3 = document.getElementById('email_send3');
 
    let $botton = document.getElementById('contacto_clientes1');
 
@@ -246,6 +247,7 @@ document.addEventListener("keyup", function(e) {
             mensaje_cliente: $mensaje.value,
             email_send1: $email_send1.value,
             email_send2: $email_send2.value,
+            email_send3: $email_send3.value,
             formulario:$formulario.value
 
         }).then(function(response){
