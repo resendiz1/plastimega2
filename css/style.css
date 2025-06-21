@@ -1498,68 +1498,54 @@ a:hover {
     transform: skew(-4deg);
 }
 
-.blog-carousel .owl-stage-outer {
+/* .blog-carousel .owl-stage-outer {
     margin-right: -1px;
+} */
+
+
+.blog-carousel .blog-img img {
+  height: 250px;               /* ajusta este valor como prefieras */
+  object-fit: cover;           /* recorta la imagen proporcionalmente */
+  width: 100%;
+  display: block;
 }
 
-.blog-carousel .owl-dots {
-    height: 82px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+
+/* Este bloque coloca las flechas a los lados del carrusel, centradas verticalmente */
+.blog-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: -40px;   /* flecha izquierda fuera */
+  right: -40px;  /* flecha derecha fuera */
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% + 80px); /* ajusta ancho para compensar desplazamiento */
+  transform: translateY(-50%);
+  pointer-events: all; /* evita bloquear clics en contenido */
+
 }
 
-.blog-carousel .owl-dots .owl-dot {
-    width: 30px;
-    height: 30px;
-    margin: 30px 10px 0 10px;
-    background: var(--bs-dark);
-    transform: skew(18deg);
-    transition: 0.5s;
+.blog-carousel .owl-nav button {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+  cursor: pointer;
+  pointer-events: all; /* hace los botones clicables */
+  transition: background 0.3s;
+
 }
 
-.blog-carousel .owl-dots .owl-dot.active {
-    width: 30px;
-    height: 50px;
-    background: var(--bs-dark);
-    transition: 0.5s;
+.blog-carousel .owl-nav button:hover {
+  background: rgba(255, 0, 0, 0.8);
 }
 
-.blog-carousel .owl-dots .owl-dot span {
-    position: relative;
-    margin-top: 50%;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
-    margin-right: -1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
 
-.blog-carousel .owl-dots .owl-dot.active span::after {
-    background: var(--bs-white);
-    height: 30px;
-    margin-top: 10px;
-}
 
-.blog-carousel .owl-dots .owl-dot span::after {
-    content: "";
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    margin-top: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: var(--bs-white);
-    transition: 0.5s;
-}
+
+
 /*** Blog End ***/
 
 /*** Explore Fitness Start ***/

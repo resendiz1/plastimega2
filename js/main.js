@@ -66,37 +66,33 @@
         }
     });
 
+
+
+    
+
     // Blogs Section
+  $(document).ready(function(){
     $(".blog-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        dots: true,
-        loop: true,
-        margin: 25,
-        nav : false,
-        navText : [
-            '<i class="fas fa-chevron-left"></i>',
-            '<i class="fas fa-chevron-right"></i>'
-        ],
-        responsiveClass: true,
-        responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:2
-            },
-            1200:{
-                items:3
-            }
-        }
+      items: 3,
+      margin: 20,
+      loop: true,
+      nav: true,
+      dots: false,
+      autoplay: false,
+      navText: [
+        '<i class="fa fa-chevron-left fa-3x"></i>',
+        '<i class="fa fa-chevron-right fa-3x"></i>'
+      ],
+      responsive:{
+        0:{ items:1 },
+        768:{ items:2 },
+        992:{ items:3 }
+      }
     });
+  });
+
+
+
 
     // Features Section
     $(".testimonial-carousel").owlCarousel({
